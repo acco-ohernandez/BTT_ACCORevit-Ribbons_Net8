@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>00.Template_Tab - Command 1</Text>
+    <Description>Some description</Description>
+    <Assembly>00.Template_Tab\00.Template_Tab.dll</Assembly>
+    <FullClassName>Template_Tab.Command1</FullClassName>
+    <ClientId>2e524a91-d923-4d86-9bfa-799868ae1b19</ClientId>
+    <VendorId>com.ACCO ENGINEERED SYSTEMS</VendorId>
+    <VendorDescription>ACCO ENGINEERED SYSTEMS, https://www.accoes.com/</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>00.Template_Tab - Command 2</Text>
+    <Description>Some description</Description>
+    <Assembly>00.Template_Tab\00.Template_Tab.dll</Assembly>
+    <FullClassName>Template_Tab.Command2</FullClassName>
+    <ClientId>5c87c9c5-5b3d-4b58-a72c-4745b3673810</ClientId>
+    <VendorId>com.ACCO ENGINEERED SYSTEMS</VendorId>
+    <VendorDescription>ACCO ENGINEERED SYSTEMS, https://www.accoes.com/</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>00.Template_Tab</Name>
+    <Assembly>00.Template_Tab\00.Template_Tab.dll</Assembly>
+    <FullClassName>Template_Tab.App</FullClassName>
+    <ClientId>5f1a9575-3843-4231-9ff3-4419ef20afb6</ClientId>
+    <VendorId>com.ACCO ENGINEERED SYSTEMS</VendorId>
+    <VendorDescription>ACCO ENGINEERED SYSTEMS, https://www.accoes.com/</VendorDescription>
+  </AddIn>
+</RevitAddIns>

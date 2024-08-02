@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>02.Engineering_BIM_Team_Tab - Command 1</Text>
+    <Description>Some description</Description>
+    <Assembly>02.Engineering_BIM_Team_Tab\02.Engineering_BIM_Team_Tab.dll</Assembly>
+    <FullClassName>Engineering_BIM_Team_Tab.Command1</FullClassName>
+    <ClientId>48094d2d-2eb3-4223-a6d6-044d42100553</ClientId>
+    <VendorId>com.ACCO ENGINEERED SYSTEMS</VendorId>
+    <VendorDescription>ACCO ENGINEERED SYSTEMS, https://www.accoes.com/</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>02.Engineering_BIM_Team_Tab - Command 2</Text>
+    <Description>Some description</Description>
+    <Assembly>02.Engineering_BIM_Team_Tab\02.Engineering_BIM_Team_Tab.dll</Assembly>
+    <FullClassName>Engineering_BIM_Team_Tab.Command2</FullClassName>
+    <ClientId>22a919ef-676d-48f5-a6e0-eb70c0a1891b</ClientId>
+    <VendorId>com.ACCO ENGINEERED SYSTEMS</VendorId>
+    <VendorDescription>ACCO ENGINEERED SYSTEMS, https://www.accoes.com/</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>02.Engineering_BIM_Team_Tab</Name>
+    <Assembly>02.Engineering_BIM_Team_Tab\02.Engineering_BIM_Team_Tab.dll</Assembly>
+    <FullClassName>Engineering_BIM_Team_Tab.App</FullClassName>
+    <ClientId>068043bf-acbe-4abb-8bb7-f2eef1f38bc5</ClientId>
+    <VendorId>com.ACCO ENGINEERED SYSTEMS</VendorId>
+    <VendorDescription>ACCO ENGINEERED SYSTEMS, https://www.accoes.com/</VendorDescription>
+  </AddIn>
+</RevitAddIns>

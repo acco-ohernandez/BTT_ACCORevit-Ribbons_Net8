@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>03.Engineering_Mechanical_Tab - Command 1</Text>
+    <Description>Some description</Description>
+    <Assembly>03.Engineering_Mechanical_Tab\03.Engineering_Mechanical_Tab.dll</Assembly>
+    <FullClassName>Engineering_Mechanical_Tab.Command1</FullClassName>
+    <ClientId>777fee99-3b44-47b2-a8b8-615a937dbb0e</ClientId>
+    <VendorId>com.ACCO ENGINEERED SYSTEMS</VendorId>
+    <VendorDescription>ACCO ENGINEERED SYSTEMS, https://www.accoes.com/</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>03.Engineering_Mechanical_Tab - Command 2</Text>
+    <Description>Some description</Description>
+    <Assembly>03.Engineering_Mechanical_Tab\03.Engineering_Mechanical_Tab.dll</Assembly>
+    <FullClassName>Engineering_Mechanical_Tab.Command2</FullClassName>
+    <ClientId>740917f4-18f8-45ed-84b5-3b079089e346</ClientId>
+    <VendorId>com.ACCO ENGINEERED SYSTEMS</VendorId>
+    <VendorDescription>ACCO ENGINEERED SYSTEMS, https://www.accoes.com/</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>03.Engineering_Mechanical_Tab</Name>
+    <Assembly>03.Engineering_Mechanical_Tab\03.Engineering_Mechanical_Tab.dll</Assembly>
+    <FullClassName>Engineering_Mechanical_Tab.App</FullClassName>
+    <ClientId>4011c18e-1675-44d3-b006-0192f8431ec4</ClientId>
+    <VendorId>com.ACCO ENGINEERED SYSTEMS</VendorId>
+    <VendorDescription>ACCO ENGINEERED SYSTEMS, https://www.accoes.com/</VendorDescription>
+  </AddIn>
+</RevitAddIns>

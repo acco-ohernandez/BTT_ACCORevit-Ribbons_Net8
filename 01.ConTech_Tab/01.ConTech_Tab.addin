@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>01.ConTech_Tab - Command 1</Text>
+    <Description>Some description</Description>
+    <Assembly>01.ConTech_Tab\01.ConTech_Tab.dll</Assembly>
+    <FullClassName>ConTech_Tab.Command1</FullClassName>
+    <ClientId>A698BF3C-4411-47D3-99D0-CF6D4ACA5BC8</ClientId>
+    <VendorId>com.ACCO ENGINEERED SYSTEMS</VendorId>
+    <VendorDescription>ACCO ENGINEERED SYSTEMS, https://www.accoes.com/</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>01.ConTech_Tab - Command 2</Text>
+    <Description>Some description</Description>
+    <Assembly>01.ConTech_Tab\01.ConTech_Tab.dll</Assembly>
+    <FullClassName>ConTech_Tab.Command2</FullClassName>
+    <ClientId>19874D55-F86A-45C3-941E-3A16F295ABE1</ClientId>
+    <VendorId>com.ACCO ENGINEERED SYSTEMS</VendorId>
+    <VendorDescription>ACCO ENGINEERED SYSTEMS, https://www.accoes.com/</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>01.ConTech_Tab</Name>
+    <Assembly>01.ConTech_Tab\01.ConTech_Tab.dll</Assembly>
+    <FullClassName>ConTech_Tab.App</FullClassName>
+    <ClientId>397BF23A-82E8-44C5-A316-D71DC8A694A5</ClientId>
+    <VendorId>com.ACCO ENGINEERED SYSTEMS</VendorId>
+    <VendorDescription>ACCO ENGINEERED SYSTEMS, https://www.accoes.com/</VendorDescription>
+  </AddIn>
+</RevitAddIns>

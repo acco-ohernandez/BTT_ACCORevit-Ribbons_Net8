@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Version 1.2.0 2024-07-31 -->
+<tab name="ConTech">
+
+  <panel name="ConTech">
+    <stackeditems>
+      <button name="About"
+        classname="RevitRibbon_MainSourceCode.Cmd_About"
+        text="About"
+        tooltip="Latest Version: 1.2.0 2024-07-31"
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ACCO_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ACCO_32x32.png"
+        tooltipimage=""
+        contexthelp=""/>
+    </stackeditems>
+  </panel>
+
+  <panel name="Quick Tools">
+    <stackeditems>
+      <pulldownbuttons name="Export Lists" image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png">
+        <button name="Object Styles - Model Objects"
+                classname="RevitRibbon_MainSourceCode.Cmd_ModelObjStyles_Export"
+                text="Object Styles - Model Objects"
+                tooltip="Exports Model Object Styles to Excel"
+                image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_16x16.png"
+                largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
+                tooltipimage=""
+                contexthelp=""/>
+        <button name="Object Styles - Annotation Objects"
+                classname="RevitRibbon_MainSourceCode.Cmd_AnnotationObjStyles_Export"
+                text="Object Styles - Annotation Objects"
+                tooltip="Exports Annotation Object Styles to Excel"
+                image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_16x16.png"
+                largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
+                tooltipimage=""
+                contexthelp=""/>
+        <button name="Object Styles - Imported Objects"
+                classname="RevitRibbon_MainSourceCode.Cmd_Model_ImportedObjects_Export"
+                text="Object Styles - Imported Objects"
+                tooltip="Exports Imported Object Styles to Excel"
+                image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_16x16.png"
+                largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
+                tooltipimage=""
+                contexthelp=""/>
+        <button name="Lines Styles"
+                classname="RevitRibbon_MainSourceCode.Cmd_LinesObjStyles_Export"
+                text="Lines Styles"
+                tooltip="Exports Line Styles to Excel"
+                image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_16x16.png"
+                largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
+                tooltipimage=""
+                contexthelp=""/>
+        <button name="Text Types"
+                classname="RevitRibbon_MainSourceCode.Cmd_TextTypes_Export"
+                text="Text Types"
+                tooltip="Exports Text Types to Excel"
+                image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_16x16.png"
+                largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
+                tooltipimage=""
+                contexthelp=""/>
+        <button name="Dimension Styles"
+                classname="RevitRibbon_MainSourceCode.Cmd_DimensionTypes_Export"
+                text="Dimension Styles"
+                tooltip="Exports Dimension Styles to Excel"
+                image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_16x16.png"
+                largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
+                tooltipimage=""
+                contexthelp=""/>
+      </pulldownbuttons>
+    </stackeditems>
+
+    <stackeditems>
+      <button name="Reset 3D View"
+        classname="RevitRibbon_MainSourceCode.Cmd_Reset3DView"
+        text="Reset 3D View"
+        tooltip="Resets the current 3D View by removing it's View Template (if there's one applied), hiding the Levels, and finishes with a ZoomToFit."
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\Reset3D_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\Reset3D_32x32.png"
+        tooltipimage=""
+        contexthelp=""/>
+    </stackeditems>
+
+    <stackeditems>
+      <button name="btn_CreateCatalogPage"
+        classname="RevitRibbon_MainSourceCode.Cmd_CreateCatalogPage"
+        text="Create
+Catalog Page"
+        tooltip="This will create a catalog page and more..."
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\Catalog_96dpi_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\Catalog_96dpi_32x32.png"
+        tooltipimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\Catalog_96dpi_192x192.png"
+        contexthelp=""/>
+    </stackeditems>
+
+  </panel>
+</tab>
