@@ -9,7 +9,6 @@
     <Import_RootNamespace>RevitRibbon_MainSourceCode</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Forms\" />
     <Folder Include="$(MSBuildThisFileDirectory)Utilities\" />
   </ItemGroup>
   <ItemGroup>
@@ -17,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\CommandAvailability.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\GlobalUsing.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\Utils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Forms\Test1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Ribbon Builder\RibbonBuilder.cs" />
   </ItemGroup>
 </Project>
