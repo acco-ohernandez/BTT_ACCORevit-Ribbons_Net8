@@ -8,11 +8,12 @@ global using Autodesk.Revit.Attributes;
 global using Autodesk.Revit.DB;
 global using Autodesk.Revit.UI;
 
-
 global using RevitRibbon_MainSourceCode;
-global using RevitRibbon_MainSourceCode.Common;
 
-global using Color = Autodesk.Revit.DB.Color;
+global using RevitRibbon_MainSourceCode_Resources.Forms;
+
+global using MessageBox = System.Windows.MessageBox;
 global using TaskDialog = Autodesk.Revit.UI.TaskDialog;
-global using View = Autodesk.Revit.DB.View;
 
+global using Utils = RevitRibbon_MainSourceCode.Utils;
+global using View = Autodesk.Revit.DB.View;

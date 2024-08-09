@@ -1,6 +1,4 @@
-﻿using Engineering_BIM_Team_Tab.Common;
-
-namespace Engineering_BIM_Team_Tab
+﻿namespace Engineering_BIM_Team_Tab
 {
     [Transaction(TransactionMode.Manual)]
     public class Command2 : IExternalCommand
@@ -33,7 +31,7 @@ namespace Engineering_BIM_Team_Tab
             }
             else
             {
-                RevitRibbon_MainSourceCode.Common.ButtonDataClass myButtonData1 = new RevitRibbon_MainSourceCode.Common.ButtonDataClass(
+                RevitRibbon_MainSourceCode.ButtonDataClass myButtonData1 = new RevitRibbon_MainSourceCode.ButtonDataClass(
                     buttonInternalName,
                     buttonTitle,
                     methodBase,

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Media.Imaging;
 
-namespace RevitRibbon_MainSourceCode.Common
+namespace RevitRibbon_MainSourceCode //.Common
 {
     internal class ButtonDataClass
     {

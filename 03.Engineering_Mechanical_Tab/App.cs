@@ -1,5 +1,3 @@
-using RevitRibbon_MainSourceCode;
-
 namespace Engineering_Mechanical_Tab
 {
     internal class App : IExternalApplication
@@ -28,38 +26,39 @@ namespace Engineering_Mechanical_Tab
             //            Debug.Print("Revit2025");
             //#endif
 
-            ////=======================================================
-            //// 1. Create ribbon tab
-            //string tabName = "Addin_Testing";
-            //string panelName = "Engineering_Mechanical_Tab"; // This is the DLL name
-            //try
-            //{
-            //    app.CreateRibbonTab(tabName);
-            //}
-            //catch (Exception)
-            //{
-            //    Debug.Print("Tab already exists.");
-            //}
+            //=======================================================
+            // 1. Create ribbon tab
+            string tabName = "Addin_Testing";
+            string panelName = "Engineering_Mechanical_Tab"; // This is the DLL name
+            try
+            {
+                app.CreateRibbonTab(tabName);
+            }
+            catch (Exception)
+            {
+                Debug.Print("Tab already exists.");
+            }
 
-            //// 2. Create ribbon panel 
-            //RibbonPanel? panel = Utils.CreateRibbonPanel(app, tabName, panelName);
+            // 2. Create ribbon panel 
+#nullable enable
+            RibbonPanel? panel = Utils.CreateRibbonPanel(app, tabName, panelName);
 
-            //if (panel is null)
-            //{
-            //    Debug.Print("Failed to create or retrieve the ribbon panel.");
-            //    return Result.Failed;
-            //}
+            if (panel is null)
+            {
+                Debug.Print("Failed to create or retrieve the ribbon panel.");
+                return Result.Failed;
+            }
 
-            //// 3. Create button data instances
-            //// 4. Create buttons
-            //PushButtonData? btnData1 = Command1.GetButtonData();
-            //PushButton? myButton1 = panel.AddItem(btnData1) as PushButton;
+            // 3. Create button data instances
+            // 4. Create buttons
+            PushButtonData? btnData1 = Command1.GetButtonData();
+            PushButton? myButton1 = panel.AddItem(btnData1) as PushButton;
 
-            //if (myButton1 is null)
-            //{
-            //    Debug.Print("Failed to create the button.");
-            //    return Result.Failed;
-            //}
+            if (myButton1 is null)
+            {
+                Debug.Print("Failed to create the button.");
+                return Result.Failed;
+            }
 
             // Uncomment the following lines if needed
             //PushButtonData? btnData2 = Command2.GetButtonData();

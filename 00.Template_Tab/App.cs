@@ -1,5 +1,7 @@
 using RevitRibbon_MainSourceCode;
 
+using RevitRibbon_MainSourceCode_Resources;
+
 namespace Template_Tab
 {
     internal class App : IExternalApplication

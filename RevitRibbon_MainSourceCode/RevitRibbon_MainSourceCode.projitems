@@ -9,14 +9,16 @@
     <Import_RootNamespace>RevitRibbon_MainSourceCode</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Utilities\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Templates\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Common\ButtonDataClass.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\CommandAvailability.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\GlobalUsing.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\Utils.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Forms\Test1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Ribbon Builder\RibbonBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\Cmd_CreateBimSetupView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\Common\Cmd_DependentViewsBrowserTree.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\MyUtils.cs" />
   </ItemGroup>
 </Project>

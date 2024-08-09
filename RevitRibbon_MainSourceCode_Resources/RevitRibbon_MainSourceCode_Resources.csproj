@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <RootNamespace>ConTech_Tab</RootNamespace>  <!-- Updated namespace -->
 		<UseWPF>true</UseWPF>
 		<UseWindowsForms>true</UseWindowsForms>
 		<LangVersion>latest</LangVersion>
@@ -89,33 +88,32 @@
 	</ItemGroup>
 	
 	<PropertyGroup>
-	<PostBuildEvent>
-    echo ********* PostBuild Events Start *********
-    echo *** Configuration: $(Configuration)
-    echo *** Copying results to Revit version directory: $(RevitVersion)
-    echo *** Project directory: $(MSBuildProjectDirectory)
+	<PostBuildEvent>echo ********* PostBuild Events Start *********
+echo *** Configuration: $(Configuration)
+echo *** Copying results to Revit version directory: $(RevitVersion)
+echo *** Project directory: $(MSBuildProjectDirectory)
 
-    echo *** Checking if Addins directory exists for Revit version: $(RevitVersion)
-    if not exist "$(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)\01.ConTech_Tab" (
-    echo *** Directory does not exist. Creating directory: $(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)\01.ConTech_Tab
-    mkdir "$(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)\01.ConTech_Tab"
-    ) else (
-    echo *** Directory already exists: $(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)\01.ConTech_Tab
-    )
-    echo.
-    echo *** Copying .addin files
-    echo --- from: $(MSBuildProjectDirectory)
-    echo --- to  : $(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)
-    copy "$(MSBuildProjectDirectory)\*.addin" "$(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)"
-    echo.
-    echo *** Copying .dll files
-    echo --- from: $(TargetDir)
-    echo --- to  : $(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)
-    copy "$(TargetDir)*.dll" "$(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)\01.ConTech_Tab"
-    echo.
-    echo ====================================================
-    set DotAddingFileDir=C:\MyRevitAddins\DotAddingFileDir
-    set RibbonXmlAndDLLFolder=C:\MyRevitAddins\RibbonXmlAndDLLFolder
+echo *** Checking if Addins directory exists for Revit version: $(RevitVersion)
+if not exist "$(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)\RevitRibbon_MainSourceCode_Resources" (
+echo *** Directory does not exist. Creating directory: $(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)\RevitRibbon_MainSourceCode_Resources
+mkdir "$(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)\RevitRibbon_MainSourceCode_Resources" 
+) else (
+echo *** Directory already exists: $(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)\RevitRibbon_MainSourceCode_Resources
+)
+echo.
+echo *** Copying .addin files 
+echo --- from: $(MSBuildProjectDirectory) 
+echo --- to  : $(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)
+copy "$(MSBuildProjectDirectory)\*.addin" "$(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)"
+echo.
+echo *** Copying .dll files 
+echo --- from: $(TargetDir) 
+echo --- to  : $(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)
+copy "$(TargetDir)*.dll" "$(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)\RevitRibbon_MainSourceCode_Resources"
+echo.
+echo ====================================================
+    set DotAddingFileDir=C:\MyRevitAddins\RevitRibbon_MainSourceCode_Resources\DotAddingFileDir
+    set RibbonXmlAndDLLFolder=C:\MyRevitAddins\RevitRibbon_MainSourceCode_Resources\RibbonXmlAndDLLFolder
 
     if "$(Configuration.Contains('Release'))" == "True" (
     echo *** Release Configuration detected.
@@ -135,64 +133,11 @@
     copy "$(TargetDir)*.dll" "%RibbonXmlAndDLLFolder%\"
     copy "$(MSBuildProjectDirectory)\*.ribbon" "%RibbonXmlAndDLLFolder%\"
     )
-
-    echo ********* PostBuild Events End *********</PostBuildEvent>
+echo ********* PostBuild Events End *********</PostBuildEvent>
 		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
 		<RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
 		<Copyright>2024</Copyright>
 	</PropertyGroup>
-	
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-2020|AnyCPU'">
-	  <NoWarn>1701;1702;CS8632</NoWarn>
-	</PropertyGroup>
-	
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-2021|AnyCPU'">
-	  <NoWarn>1701;1702;CS8632</NoWarn>
-	</PropertyGroup>
-	
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-2022|AnyCPU'">
-	  <NoWarn>1701;1702;CS8632</NoWarn>
-	</PropertyGroup>
-	
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-2023|AnyCPU'">
-	  <NoWarn>1701;1702;CS8632</NoWarn>
-	</PropertyGroup>
-	
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-2024|AnyCPU'">
-	  <NoWarn>1701;1702;CS8632</NoWarn>
-	</PropertyGroup>
-	
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-2025|AnyCPU'">
-	  <NoWarn>1701;1702;CS8632</NoWarn>
-	</PropertyGroup>
-	
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-2020|AnyCPU'">
-	  <NoWarn>1701;1702;CS8632</NoWarn>
-	</PropertyGroup>
-	
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-2021|AnyCPU'">
-	  <NoWarn>1701;1702;CS8632</NoWarn>
-	</PropertyGroup>
-	
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-2022|AnyCPU'">
-	  <NoWarn>1701;1702;CS8632</NoWarn>
-	</PropertyGroup>
-	
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-2023|AnyCPU'">
-	  <NoWarn>1701;1702;CS8632</NoWarn>
-	</PropertyGroup>
-	
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-2024|AnyCPU'">
-	  <NoWarn>1701;1702;CS8632</NoWarn>
-	</PropertyGroup>
-	
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-2025|AnyCPU'">
-	  <NoWarn>1701;1702;CS8632</NoWarn>
-	</PropertyGroup>
-	
-	<ItemGroup>
-	  <ProjectReference Include="..\RevitRibbon_MainSourceCode_Resources\RevitRibbon_MainSourceCode_Resources.csproj" />
-	</ItemGroup>
 
   <!--<ItemGroup>
 	  <Reference Include="Microsoft.VisualBasic" />
@@ -230,7 +175,5 @@
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>
-	
-	<Import Project="..\RevitRibbon_MainSourceCode\RevitRibbon_MainSourceCode.projitems" Label="Shared" />
   
 </Project>

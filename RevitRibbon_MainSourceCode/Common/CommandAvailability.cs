@@ -1,4 +1,4 @@
-﻿namespace RevitRibbon_MainSourceCode.Common
+﻿namespace RevitRibbon_MainSourceCode //.Common
 {
     internal class CommandAvailability : IExternalCommandAvailability
     {

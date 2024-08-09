@@ -1,4 +1,4 @@
-﻿using Engineering_BIM_Team_Tab.Common;
+﻿using RevitRibbon_MainSourceCode;
 
 namespace Engineering_Mechanical_Tab
 {
@@ -15,7 +15,8 @@ namespace Engineering_Mechanical_Tab
 
             // Your code goes here
             TaskDialog.Show("INFO", $"Hello from {Utils.GetDeclaringTypeName1()}");
-
+            Cmd_CreateBimSetupView cmd_CreateBimSetupView = new Cmd_CreateBimSetupView();
+            cmd_CreateBimSetupView.Execute(commandData, ref message, elements);
 
             return Result.Succeeded;
         }
@@ -25,6 +26,7 @@ namespace Engineering_Mechanical_Tab
             string buttonInternalName = "btnCommand1";
             string buttonTitle = "Button 1";
             //string? methodBase = MethodBase.GetCurrentMethod().DeclaringType?.FullName;
+
             string? methodBase = Utils.GetDeclaringTypeName1();
 
             if (methodBase == null)
@@ -33,7 +35,7 @@ namespace Engineering_Mechanical_Tab
             }
             else
             {
-                RevitRibbon_MainSourceCode.Common.ButtonDataClass myButtonData1 = new RevitRibbon_MainSourceCode.Common.ButtonDataClass(
+                RevitRibbon_MainSourceCode.ButtonDataClass myButtonData1 = new RevitRibbon_MainSourceCode.ButtonDataClass(
                     buttonInternalName,
                     buttonTitle,
                     methodBase,
