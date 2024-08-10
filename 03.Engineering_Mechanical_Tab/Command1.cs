@@ -15,8 +15,12 @@ namespace Engineering_Mechanical_Tab
 
             // Your code goes here
             TaskDialog.Show("INFO", $"Hello from {Utils.GetDeclaringTypeName1()}");
-            Cmd_CreateBimSetupView cmd_CreateBimSetupView = new Cmd_CreateBimSetupView();
-            cmd_CreateBimSetupView.Execute(commandData, ref message, elements);
+
+            //Cmd_CreateBimSetupView cmd_CreateBimSetupView = new Cmd_CreateBimSetupView();
+            //cmd_CreateBimSetupView.Execute(commandData, ref message, elements);
+
+            Cmd_RenameScopeBoxes cmd_RenameScopeBoxes = new Cmd_RenameScopeBoxes();
+            cmd_RenameScopeBoxes.Execute(commandData, ref message, elements);
 
             return Result.Succeeded;
         }

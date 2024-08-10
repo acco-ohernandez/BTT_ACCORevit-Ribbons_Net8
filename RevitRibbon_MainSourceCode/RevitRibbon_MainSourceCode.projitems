@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\Utils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Ribbon Builder\RibbonBuilder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\Cmd_CreateBimSetupView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\Cmd_RenameScopeBoxes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\Common\Cmd_DependentViewsBrowserTree.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\MyUtils.cs" />
   </ItemGroup>
