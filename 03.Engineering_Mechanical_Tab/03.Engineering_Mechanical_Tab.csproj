@@ -1,95 +1,88 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  
+
   <PropertyGroup>
-    <RootNamespace>Engineering_Mechanical_Tab</RootNamespace>  <!-- Updated namespace -->
+    <RootNamespace>Engineering_Mechanical_Tab</RootNamespace>
+    <!-- Updated namespace -->
     <RootProjectName>03.Engineering_Mechanical_Tab</RootProjectName>
   </PropertyGroup>
 
   <!-- Add your specific resources and any project-specific configurations here -->
-  <ItemGroup>
-    <Resource Include="Resources\Blue_16.png" />
-    <Resource Include="Resources\Blue_32.png" />
-    <Resource Include="Resources\Green_16.png" />
-    <Resource Include="Resources\Green_32.png" />
-    <Resource Include="Resources\Red_16.png" />
-    <Resource Include="Resources\Red_32.png" />
-    <Resource Include="Resources\Yellow_16.png" />
-    <Resource Include="Resources\Yellow_32.png" />
-  </ItemGroup>
 
   <PropertyGroup>
-    <PostBuildEvent>echo ********* PostBuild Events Start *********
-set ROOTPROJECTNAME=$(RootProjectName)
-set MSBUILDPROJECTDIR=$(MSBuildProjectDirectory)
-set OUTPUTBINDIR=%MSBUILDPROJECTDIR%\$(OutputPath)
-set REVITVERSION=$(RevitVersion)
-set APPDATA_AUTODESK_REVIT_ADDINS_YEAR=$(AppData)\Autodesk\REVIT\Addins\%REVITVERSION%
-set APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME=%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%\%ROOTPROJECTNAME%
-set DotAddingFileDir=C:\MyRevitAddins\%ROOTPROJECTNAME%\%REVITVERSION%
-set RibbonXmlAndDLLFolder=C:\MyRevitAddins\%ROOTPROJECTNAME%\%REVITVERSION%
+    <PostBuildEvent>
+      echo ********* PostBuild Events Start *********
+      set ROOTPROJECTNAME=$(RootProjectName)
+      set MSBUILDPROJECTDIR=$(MSBuildProjectDirectory)
+      set OUTPUTBINDIR=%MSBUILDPROJECTDIR%\$(OutputPath)
+      set REVITVERSION=$(RevitVersion)
+      set APPDATA_AUTODESK_REVIT_ADDINS_YEAR=$(AppData)\Autodesk\REVIT\Addins\%REVITVERSION%
+      set APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME=%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%\%ROOTPROJECTNAME%
+      set DotAddingFileDir=C:\MyRevitAddins\%ROOTPROJECTNAME%\%REVITVERSION%
+      set RibbonXmlAndDLLFolder=C:\MyRevitAddins\%ROOTPROJECTNAME%\%REVITVERSION%
 
-echo ******** Project Info *********
-echo *** Configuration     : $(Configuration)
-echo *** Project directory : %MSBUILDPROJECTDIR%
-echo *** DLLs Directory    : %OUTPUTBINDIR%
+      echo ******** Project Info *********
+      echo *** Configuration     : $(Configuration)
+      echo *** Project directory : %MSBUILDPROJECTDIR%
+      echo *** DLLs Directory    : %OUTPUTBINDIR%
 
-echo.
-if "$(Configuration.Contains('Debug'))" == "True" (
-echo ====================================================
-echo *** Debug Configuration detected.
-echo.
-echo ******** Copy Files to User Profile *********
-echo *** Checking if Addins directory exists for Revit version: $(RevitVersion)
-if not exist "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%" (
-echo *** Directory does not exist. Creating directory: %APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%
-mkdir "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%"
-) else (
-echo *** Directory already exists: %APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%
-)
-echo.
-echo *** Copying .addin files
-echo --- from: %MSBUILDPROJECTDIR%
-echo --- to  : %APPDATA_AUTODESK_REVIT_ADDINS_YEAR%
-copy "%MSBUILDPROJECTDIR%\*.addin" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%"
-echo.
-echo *** Copying .dll files
-echo --- from: $(OutputPath)
-echo --- to  :%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%
-copy "%OUTPUTBINDIR%\*.dll" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%"
-)
+      echo.
+      if "$(Configuration.Contains('Debug'))" == "True" (
+      echo ====================================================
+      echo *** Debug Configuration detected.
+      echo.
+      echo ******** Copy Files to User Profile *********
+      echo *** Checking if Addins directory exists for Revit version: $(RevitVersion)
+      if not exist "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%" (
+      echo *** Directory does not exist. Creating directory: %APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%
+      mkdir "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%"
+      ) else (
+      echo *** Directory already exists: %APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%
+      )
+      echo.
+      echo *** Copying .addin files
+      echo --- from: %MSBUILDPROJECTDIR%
+      echo --- to  : %APPDATA_AUTODESK_REVIT_ADDINS_YEAR%
+      copy "%MSBUILDPROJECTDIR%\*.addin" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%"
+      echo.
+      echo *** Copying .dll files
+      echo --- from: $(OutputPath)
+      echo --- to  :%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%
+      copy "%OUTPUTBINDIR%\*.dll" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%"
+      )
 
-echo.
-if "$(Configuration.Contains('Release'))" == "True" (
-echo ====================================================
-echo *** Release Configuration detected.
-echo.
-echo ******** Copy Files to other locations *********
+      echo.
+      if "$(Configuration.Contains('Release'))" == "True" (
+      echo ====================================================
+      echo *** Release Configuration detected.
+      echo.
+      echo ******** Copy Files to other locations *********
 
 
-if not exist "%DotAddingFileDir%" (
-echo *** Creating %DotAddingFileDir%
-mkdir "%DotAddingFileDir%"
-)
-echo.
-echo ******** Copying .addin files to: %DotAddingFileDir%
-copy "%MSBUILDPROJECTDIR%\*.addin" "%DotAddingFileDir%\"
+      if not exist "%DotAddingFileDir%" (
+      echo *** Creating %DotAddingFileDir%
+      mkdir "%DotAddingFileDir%"
+      )
+      echo.
+      echo ******** Copying .addin files to: %DotAddingFileDir%
+      copy "%MSBUILDPROJECTDIR%\*.addin" "%DotAddingFileDir%\"
 
-if not exist "%RibbonXmlAndDLLFolder%" (
-echo *** Creating %RibbonXmlAndDLLFolder%
-mkdir "%RibbonXmlAndDLLFolder%"
-)
-echo.
-echo ******** Copying .ribbon and .dll files to:  %RibbonXmlAndDLLFolder%
-copy "%OUTPUTBINDIR%\*.dll" "%RibbonXmlAndDLLFolder%\"
-copy "%MSBUILDPROJECTDIR%\*.ribbon" "%RibbonXmlAndDLLFolder%\"
-)
+      if not exist "%RibbonXmlAndDLLFolder%" (
+      echo *** Creating %RibbonXmlAndDLLFolder%
+      mkdir "%RibbonXmlAndDLLFolder%"
+      )
+      echo.
+      echo ******** Copying .ribbon and .dll files to:  %RibbonXmlAndDLLFolder%
+      copy "%OUTPUTBINDIR%\*.dll" "%RibbonXmlAndDLLFolder%\"
+      copy "%MSBUILDPROJECTDIR%\*.ribbon" "%RibbonXmlAndDLLFolder%\"
+      )
 
-echo ********* PostBuild Events End *********</PostBuildEvent>
+      echo ********* PostBuild Events End *********
+    </PostBuildEvent>
   </PropertyGroup>
 
   <!-- Import the shared project items -->
   <Import Project="..\RevitRibbon_MainSourceCode\RevitRibbon_MainSourceCode.projitems" Label="Shared" />
-	
+
   <!-- Common Project References -->
   <ItemGroup>
     <ProjectReference Include="..\RevitRibbon_MainSourceCode_Resources\RevitRibbon_MainSourceCode_Resources.csproj" />

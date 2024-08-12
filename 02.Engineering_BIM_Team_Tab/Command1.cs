@@ -14,6 +14,9 @@
             // Your code goes here
             TaskDialog.Show("INFO", $"Hello from {Utils.GetDeclaringTypeName1()}");
 
+            //var createBimSetupView = new Cmd_CreateBimSetupView();
+            //createBimSetupView.Execute(commandData, ref message, elements);
+
             return Result.Succeeded;
         }
         internal static PushButtonData GetButtonData()
@@ -35,8 +38,8 @@
                     buttonInternalName,
                     buttonTitle,
                     methodBase,
-                    Properties.Resources.Blue_32,
-                    Properties.Resources.Blue_16,
+                    RevitRibbon_MainSourceCode_Resources.Properties.Resources.Blue_32,
+                    RevitRibbon_MainSourceCode_Resources.Properties.Resources.Blue_16,
                     "This is a tooltip for Button 1");
 
                 return myButtonData1.Data;
