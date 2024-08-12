@@ -20,10 +20,11 @@
             //Cmd_RenameScopeBoxes cmd_RenameScopeBoxes = new Cmd_RenameScopeBoxes();
             //cmd_RenameScopeBoxes.Execute(commandData, ref message, elements);
 
-            Cmd_ScopeBoxGrid cmd_ScopeBoxGrid = new Cmd_ScopeBoxGrid();
-            cmd_ScopeBoxGrid.Execute(commandData, ref message, elements);
+            //Cmd_ScopeBoxGrid cmd_ScopeBoxGrid = new Cmd_ScopeBoxGrid();
+            //cmd_ScopeBoxGrid.Execute(commandData, ref message, elements);
 
-
+            //Cmd_CreateDependentScopeView cmd_CreateDependentScopeView = new Cmd_CreateDependentScopeView();
+            //cmd_CreateDependentScopeView.Execute(commandData, ref message, elements);
 
 
             //var createBimSetupView = new Cmd_CreateBimSetupView();
