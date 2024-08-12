@@ -14,6 +14,18 @@
             // Your code goes here
             TaskDialog.Show("INFO", $"Hello from {Utils.GetDeclaringTypeName1()}");
 
+            //Cmd_CreateBimSetupView cmd_CreateBimSetupView = new Cmd_CreateBimSetupView();
+            //cmd_CreateBimSetupView.Execute(commandData, ref message, elements);
+
+            //Cmd_RenameScopeBoxes cmd_RenameScopeBoxes = new Cmd_RenameScopeBoxes();
+            //cmd_RenameScopeBoxes.Execute(commandData, ref message, elements);
+
+            Cmd_ScopeBoxGrid cmd_ScopeBoxGrid = new Cmd_ScopeBoxGrid();
+            cmd_ScopeBoxGrid.Execute(commandData, ref message, elements);
+
+
+
+
             //var createBimSetupView = new Cmd_CreateBimSetupView();
             //createBimSetupView.Execute(commandData, ref message, elements);
 
