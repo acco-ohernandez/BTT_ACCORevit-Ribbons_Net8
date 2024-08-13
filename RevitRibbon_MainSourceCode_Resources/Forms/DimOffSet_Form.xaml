@@ -1,0 +1,34 @@
+﻿<Window x:Class="RevitRibbon_MainSourceCode_Resources.Forms.DimOffSet_Form"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RevitRibbon_MainSourceCode_Resources.Forms"
+        mc:Ignorable="d"
+       d:DesignHeight="190"
+d:DesignWidth="400"
+Title="Dimension OffSet" 
+Height="190" 
+Width="400"
+WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <StackPanel x:Name="sp_Group1" Orientation="Vertical" VerticalAlignment="Center">
+            <TextBlock x:Name="tbl_Info" Width="200" TextWrapping="Wrap" Text="Select the OffSet you want from the right and the top of the CropBox:" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <GroupBox Height="auto" Width="Auto" x:Name="gp1" Header="Scale">
+                    <StackPanel>
+                        <RadioButton Content="1/4 Scale" IsChecked="True" Checked="RadioButton_Checked"/>
+                        <RadioButton Content="1/8 Scale" Checked="RadioButton_Checked"/>
+                        <RadioButton Content="Custom Scale" Checked="RadioButton_Checked"/>
+
+                    </StackPanel>
+                </GroupBox>
+                <TextBox x:FieldModifier="public" x:Name="tb_OffSetFeet" Text="2.0" Width="40" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False"/>
+                <Label Content="Ft." FontWeight="Bold" Width="40" Height="30"/>
+            </StackPanel>
+
+            <Button x:Name="btn_Ok" Content="OK" Click="btn_Ok_Click" Margin="10"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

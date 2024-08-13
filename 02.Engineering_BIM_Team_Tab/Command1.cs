@@ -12,7 +12,11 @@
             Document doc = uiapp.ActiveUIDocument.Document;
 
             // Your code goes here
-            TaskDialog.Show("INFO", $"Hello from {Utils.GetDeclaringTypeName1()}");
+            //TaskDialog.Show("INFO", $"Hello from {Utils.GetDeclaringTypeName1()}");
+
+
+            //var createBimSetupView = new Cmd_CreateBimSetupView();
+            //createBimSetupView.Execute(commandData, ref message, elements);
 
             //Cmd_CreateBimSetupView cmd_CreateBimSetupView = new Cmd_CreateBimSetupView();
             //cmd_CreateBimSetupView.Execute(commandData, ref message, elements);
@@ -20,15 +24,19 @@
             //Cmd_RenameScopeBoxes cmd_RenameScopeBoxes = new Cmd_RenameScopeBoxes();
             //cmd_RenameScopeBoxes.Execute(commandData, ref message, elements);
 
-            //Cmd_ScopeBoxGrid cmd_ScopeBoxGrid = new Cmd_ScopeBoxGrid();
-            //cmd_ScopeBoxGrid.Execute(commandData, ref message, elements);
+            var gridBoxes = TaskDialog.Show("info", "Run Create ScopeBoxGrid", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel);
+            if (gridBoxes == TaskDialogResult.Ok)
+            {
+                Cmd_ScopeBoxGrid cmd_ScopeBoxGrid = new Cmd_ScopeBoxGrid();
+                cmd_ScopeBoxGrid.Execute(commandData, ref message, elements);
+            }
 
             //Cmd_CreateDependentScopeView cmd_CreateDependentScopeView = new Cmd_CreateDependentScopeView();
             //cmd_CreateDependentScopeView.Execute(commandData, ref message, elements);
 
+            Cmd_GridDimensions cmd_GridDimensions = new Cmd_GridDimensions();
+            cmd_GridDimensions.Execute(commandData, ref message, elements);
 
-            //var createBimSetupView = new Cmd_CreateBimSetupView();
-            //createBimSetupView.Execute(commandData, ref message, elements);
 
             return Result.Succeeded;
         }
