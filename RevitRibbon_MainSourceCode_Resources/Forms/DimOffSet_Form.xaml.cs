@@ -54,7 +54,5 @@ namespace RevitRibbon_MainSourceCode_Resources.Forms
                     break;
             }
         }
-
-
     }
 }

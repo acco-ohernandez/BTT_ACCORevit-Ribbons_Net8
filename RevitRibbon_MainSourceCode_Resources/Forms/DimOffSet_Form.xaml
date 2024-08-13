@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RevitRibbon_MainSourceCode_Resources.Forms"
         mc:Ignorable="d"
-       d:DesignHeight="190"
+        d:DesignHeight="190"
 d:DesignWidth="400"
 Title="Dimension OffSet" 
 Height="190" 
