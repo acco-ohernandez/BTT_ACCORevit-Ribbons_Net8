@@ -5,68 +5,66 @@
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            // this is a variable for the Revit application
             UIApplication uiapp = commandData.Application;
-
-            // this is a variable for the current Revit model
             Document doc = uiapp.ActiveUIDocument.Document;
 
-            // Your code goes here
-            //TaskDialog.Show("INFO", $"Hello from {Utils.GetDeclaringTypeName1()}");
-
-
-            //var createBimSetupView = new Cmd_CreateBimSetupView();
-            //createBimSetupView.Execute(commandData, ref message, elements);
-
-            //Cmd_CreateBimSetupView cmd_CreateBimSetupView = new Cmd_CreateBimSetupView();
-            //cmd_CreateBimSetupView.Execute(commandData, ref message, elements);
-
-            //Cmd_RenameScopeBoxes cmd_RenameScopeBoxes = new Cmd_RenameScopeBoxes();
-            //cmd_RenameScopeBoxes.Execute(commandData, ref message, elements);
-
-            var gridBoxes = TaskDialog.Show("info", "Run Create ScopeBoxGrid", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel);
-            if (gridBoxes == TaskDialogResult.Ok)
+            if (TaskDialog.Show("info", "1 - Run Create Bim Setup View", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
-                Cmd_ScopeBoxGrid cmd_ScopeBoxGrid = new Cmd_ScopeBoxGrid();
-                cmd_ScopeBoxGrid.Execute(commandData, ref message, elements);
+                new Cmd_CreateBimSetupView().Execute(commandData, ref message, elements);
             }
 
-            //Cmd_CreateDependentScopeView cmd_CreateDependentScopeView = new Cmd_CreateDependentScopeView();
-            //cmd_CreateDependentScopeView.Execute(commandData, ref message, elements);
-
-            //Cmd_GridDimensions cmd_GridDimensions = new Cmd_GridDimensions();
-            //cmd_GridDimensions.Execute(commandData, ref message, elements);
-
-            var MatchLines = TaskDialog.Show("info", "Run Create Matchlines guides", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel);
-            if (MatchLines == TaskDialogResult.Ok)
+            if (TaskDialog.Show("info", "2 - Run Create ScopeBoxGrid", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
-                Cmd_CreateMatchlineReference cmd_CreateMatchlineReference = new Cmd_CreateMatchlineReference();
-                cmd_CreateMatchlineReference.Execute(commandData, ref message, elements);
+                new Cmd_ScopeBoxGrid().Execute(commandData, ref message, elements);
             }
 
-            var ViewReferences = TaskDialog.Show("info", "Run Create View References", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel);
-            if (ViewReferences == TaskDialogResult.Ok)
+            if (TaskDialog.Show("info", "3 - Run Rename Scope Boxes", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
-                Cmd_CreateViewReferencesDuplicates cmd_CreateViewReferencesDuplicates = new Cmd_CreateViewReferencesDuplicates();
-                cmd_CreateViewReferencesDuplicates.Execute(commandData, ref message, elements);
+                new Cmd_RenameScopeBoxes().Execute(commandData, ref message, elements);
             }
 
-            var CreateParentViews = TaskDialog.Show("info", "Run Create Parent Views", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel);
-            if (CreateParentViews == TaskDialogResult.Ok)
+            if (TaskDialog.Show("info", "4 - Run Create Dependent Scope View", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
-                Cmd_CreateParentPlotViews cmd_CreateParentPlotViews = new Cmd_CreateParentPlotViews();
-                cmd_CreateParentPlotViews.Execute(commandData, ref message, elements);
+                new Cmd_CreateDependentScopeView().Execute(commandData, ref message, elements);
+            }
+
+            if (TaskDialog.Show("info", "5 - Run Create Grid Dimensions", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            {
+                new Cmd_GridDimensions().Execute(commandData, ref message, elements);
+            }
+
+            if (TaskDialog.Show("info", "6 - Run Create Matchlines guides", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            {
+                new Cmd_CreateMatchlineReference().Execute(commandData, ref message, elements);
+            }
+
+            if (TaskDialog.Show("info", "7 - Run Create View References", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            {
+                new Cmd_CreateViewReferencesDuplicates().Execute(commandData, ref message, elements);
+            }
+
+            if (TaskDialog.Show("info", "8 - Run Create Parent Views", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            {
+                new Cmd_CreateParentPlotViews().Execute(commandData, ref message, elements);
+            }
+
+            if (TaskDialog.Show("info", "9 - Run Update Applied Dependent Views", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            {
+                new Cmd_UpdateAppliedDependentViews().Execute(commandData, ref message, elements);
+            }
+
+            if (TaskDialog.Show("info", "10 - Copy Dims To Parent Views", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            {
+                new Cmd_CopyDimsToParentViews().Execute(commandData, ref message, elements);
             }
 
             return Result.Succeeded;
         }
+
         internal static PushButtonData GetButtonData()
         {
-            // use this method to define the properties for this command in the Revit ribbon
             string buttonInternalName = "btnCommand1";
             string buttonTitle = "Button 1";
-            //string? methodBase = MethodBase.GetCurrentMethod().DeclaringType?.FullName;
-
             string? methodBase = Utils.GetDeclaringTypeName1();
 
             if (methodBase == null)
