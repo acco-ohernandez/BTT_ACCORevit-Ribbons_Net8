@@ -19,9 +19,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Ribbon Builder\RibbonBuilder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\Cmd_CreateBimSetupView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\Cmd_CreateDependentScopeView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\Cmd_CreateMatchlineReference.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\Cmd_CreateParentPlotViews.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\Cmd_CreateViewReferencesDuplicates.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\Cmd_GridDimensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\Cmd_ScopeBoxGrid.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\Cmd_RenameScopeBoxes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\CreateNewLineStyles.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\Common\Cmd_DependentViewsBrowserTree.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\MyUtils.cs" />
   </ItemGroup>

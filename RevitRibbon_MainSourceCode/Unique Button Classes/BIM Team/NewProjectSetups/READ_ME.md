@@ -33,11 +33,11 @@ This README provides an overview of the buttons included in the "BIM Project Set
    - Function: This button will create dimensions for horizontal and vertical grid lines. Additionally, when scope boxes are selected, it will create linear dimensions above and to the right for all grids within each Scope Box. All dimensions created will use the GRID DIMENSIONS style to differentiate themselves from other standard dimension styles.
 
 #### 6. Matchline Detail Lines
-   - Class: Cmd_MatchlineDetailLines.cs
+   - Class: Cmd_CreateMatchlineReference.cs
    - Function: This button will create intersecting detail lines between selected scope boxes. These detail lines can then be used as references when creating match lines using Revit’s native Match Line function. Note: Only use this in a non-plotting view to avoid any confusion.
 
 #### 7. Place View References
-   - Class: btn_CreateViewReferencesDuplicates.cs
+   - Class: Cmd_CreateViewReferencesDuplicates.cs
    - Function: This button will create Duplicates of an existing View Reference and place them at the intersecting corners of scope boxes.
 
 #### 8. Create Parent Views

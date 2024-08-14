@@ -34,9 +34,29 @@
             //Cmd_CreateDependentScopeView cmd_CreateDependentScopeView = new Cmd_CreateDependentScopeView();
             //cmd_CreateDependentScopeView.Execute(commandData, ref message, elements);
 
-            Cmd_GridDimensions cmd_GridDimensions = new Cmd_GridDimensions();
-            cmd_GridDimensions.Execute(commandData, ref message, elements);
+            //Cmd_GridDimensions cmd_GridDimensions = new Cmd_GridDimensions();
+            //cmd_GridDimensions.Execute(commandData, ref message, elements);
 
+            var MatchLines = TaskDialog.Show("info", "Run Create Matchlines guides", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel);
+            if (MatchLines == TaskDialogResult.Ok)
+            {
+                Cmd_CreateMatchlineReference cmd_CreateMatchlineReference = new Cmd_CreateMatchlineReference();
+                cmd_CreateMatchlineReference.Execute(commandData, ref message, elements);
+            }
+
+            var ViewReferences = TaskDialog.Show("info", "Run Create View References", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel);
+            if (ViewReferences == TaskDialogResult.Ok)
+            {
+                Cmd_CreateViewReferencesDuplicates cmd_CreateViewReferencesDuplicates = new Cmd_CreateViewReferencesDuplicates();
+                cmd_CreateViewReferencesDuplicates.Execute(commandData, ref message, elements);
+            }
+
+            var CreateParentViews = TaskDialog.Show("info", "Run Create Parent Views", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel);
+            if (CreateParentViews == TaskDialogResult.Ok)
+            {
+                Cmd_CreateParentPlotViews cmd_CreateParentPlotViews = new Cmd_CreateParentPlotViews();
+                cmd_CreateParentPlotViews.Execute(commandData, ref message, elements);
+            }
 
             return Result.Succeeded;
         }
