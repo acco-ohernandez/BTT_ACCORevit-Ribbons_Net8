@@ -8,54 +8,59 @@
             UIApplication uiapp = commandData.Application;
             Document doc = uiapp.ActiveUIDocument.Document;
 
-            if (TaskDialog.Show("info", "1 - Run Create Bim Setup View", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            if (TaskDialog.Show("Select", "1 - Run Create Bim Setup View", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
                 new Cmd_CreateBimSetupView().Execute(commandData, ref message, elements);
             }
 
-            if (TaskDialog.Show("info", "2 - Run Create ScopeBoxGrid", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            if (TaskDialog.Show("Select", "2 - Run Create ScopeBoxGrid", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
                 new Cmd_ScopeBoxGrid().Execute(commandData, ref message, elements);
             }
 
-            if (TaskDialog.Show("info", "3 - Run Rename Scope Boxes", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            if (TaskDialog.Show("Select", "3 - Run Rename Scope Boxes", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
                 new Cmd_RenameScopeBoxes().Execute(commandData, ref message, elements);
             }
 
-            if (TaskDialog.Show("info", "4 - Run Create Dependent Scope View", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            if (TaskDialog.Show("Select", "4 - Run Create Dependent Scope View", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
                 new Cmd_CreateDependentScopeView().Execute(commandData, ref message, elements);
             }
 
-            if (TaskDialog.Show("info", "5 - Run Create Grid Dimensions", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            if (TaskDialog.Show("Select", "5 - Run Create Grid Dimensions", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
                 new Cmd_GridDimensions().Execute(commandData, ref message, elements);
             }
 
-            if (TaskDialog.Show("info", "6 - Run Create Matchlines guides", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            if (TaskDialog.Show("Select", "6 - Run Create Matchlines guides", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
                 new Cmd_CreateMatchlineReference().Execute(commandData, ref message, elements);
             }
 
-            if (TaskDialog.Show("info", "7 - Run Create View References", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            if (TaskDialog.Show("Select", "7 - Run Create View References", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
                 new Cmd_CreateViewReferencesDuplicates().Execute(commandData, ref message, elements);
             }
 
-            if (TaskDialog.Show("info", "8 - Run Create Parent Views", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            if (TaskDialog.Show("Select", "8 - Run Create Parent Views", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
                 new Cmd_CreateParentPlotViews().Execute(commandData, ref message, elements);
             }
 
-            if (TaskDialog.Show("info", "9 - Run Update Applied Dependent Views", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            if (TaskDialog.Show("Select", "9 - Run Update Applied Dependent Views", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
                 new Cmd_UpdateAppliedDependentViews().Execute(commandData, ref message, elements);
             }
 
-            if (TaskDialog.Show("info", "10 - Copy Dims To Parent Views", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            if (TaskDialog.Show("Select", "10 - Copy Dims To Parent Views", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
                 new Cmd_CopyDimsToParentViews().Execute(commandData, ref message, elements);
+            }
+
+            if (TaskDialog.Show("Select", "11 - Run Clean Dependent View Dims", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
+            {
+                new Cmd_CleanDependentViewDims().Execute(commandData, ref message, elements);
             }
 
             return Result.Succeeded;
