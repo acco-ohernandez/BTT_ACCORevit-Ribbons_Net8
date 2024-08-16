@@ -14,7 +14,22 @@
     </stackeditems>
   </panel>
 
-  
+
+
+  <panel name="PyRevit Tools">
+    <stackeditems>
+      <pulldownbuttons name="Views" image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CopyVT_32x32.png">
+        <button name="Copy View Templates to Other Open Models"
+          classname="RevitRibbon_MainSourceCode.Cmd_CopyViewTemplates"
+          text="Copy View Templates to Other Open Models"
+          tooltip="Allows the user to copy selected View Templates from current Revit model to other open Revit models of the users choosing."
+          image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CopyVT_16x16.png"
+          largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CopyVT_32x32.png"
+          tooltipimage=""
+          contexthelp=""/>
+      </pulldownbuttons>
+    </stackeditems>
+  </panel>
   
   <panel name="Initial Setup">
 

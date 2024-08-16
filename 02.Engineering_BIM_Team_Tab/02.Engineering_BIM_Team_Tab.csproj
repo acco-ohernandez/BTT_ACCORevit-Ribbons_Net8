@@ -37,7 +37,7 @@
       echo *** Directory already exists: %APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%
       )
       echo.
-      echo *** Copying *Tab.addin files
+      echo *** Copying *Tab_%REVITVERSION%.addin files
       echo --- from: %MSBUILDPROJECTDIR%
       echo --- to  : %APPDATA_AUTODESK_REVIT_ADDINS_YEAR%
       copy "%MSBUILDPROJECTDIR%\*Tab.addin" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%"
@@ -46,6 +46,7 @@
       echo --- from: $(OutputPath)
       echo --- to  :%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%
       copy "%OUTPUTBINDIR%\*.dll" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%"
+      copy "%MSBUILDPROJECTDIR%\*.ribbon" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%"
       )
 
       echo.

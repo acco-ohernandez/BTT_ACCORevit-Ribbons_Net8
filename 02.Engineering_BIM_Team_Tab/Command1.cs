@@ -8,6 +8,12 @@
             UIApplication uiapp = commandData.Application;
             Document doc = uiapp.ActiveUIDocument.Document;
 
+            if (TaskDialog.Show("Info", "Copy ViewTemplates", TaskDialogCommonButtons.Ok) == TaskDialogResult.Ok)
+            {
+                new Cmd_CopyViewTemplates().Execute(commandData, ref message, elements);
+                return Result.Succeeded;
+            }
+
             if (TaskDialog.Show("Select", "1 - Run Create Bim Setup View", TaskDialogCommonButtons.Ok | TaskDialogCommonButtons.Cancel) == TaskDialogResult.Ok)
             {
                 new Cmd_CreateBimSetupView().Execute(commandData, ref message, elements);

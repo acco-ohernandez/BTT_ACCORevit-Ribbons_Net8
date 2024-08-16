@@ -1,0 +1,48 @@
+﻿<Window x:Class="RevitRibbon_MainSourceCode_Resources.Forms.ListForm1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RevitRibbon_MainSourceCode_Resources.Forms"
+        mc:Ignorable="d"
+       Title="Copy view templates to other Revit Models" Height="650" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" x:FieldModifier="public" x:Name="lbl_Info" Content="." HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+
+        <DataGrid x:Name="dataGrid" 
+      Grid.Row="1"
+      CanUserAddRows="False" 
+      Margin="10,10,10,62" 
+      HorizontalAlignment="Stretch"
+      ColumnWidth="*" 
+      GridLinesVisibility="Horizontal"
+      AutoGenerateColumns="False"
+      SelectionUnit="FullRow"
+      SelectionMode="Extended" 
+      SelectionChanged="dataGrid_SelectionChanged"
+      PreviewMouseDown="dataGrid_PreviewMouseDown"
+      >
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Header="Select" Binding="{Binding IsSelected, Mode=TwoWay}" Width="auto" IsReadOnly="False"/>
+
+                <DataGridTextColumn Header="Name" Binding="{Binding TemplateName}" Width="*" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Grid.Row="2" HorizontalAlignment="Stretch" Margin="3">
+            <Label x:Name="lbl_ViewTemplateCount" Content="" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" FontWeight="Bold" />
+            <StackPanel HorizontalAlignment="Right" Margin="3" Orientation="Horizontal">
+                <Button x:Name="btn_CheckAll" Content="Check All" Width="150" Height="30" Click="btn_CheckAll_Click" />
+                <Button x:Name="btn_UnCheckAll" Grid.Row="5" Content="UnCheck All" Width="150" Height="30" Click="btn_UnCheckAll_Click" Margin="5,0,0,0" />
+                <Button x:Name="btn_Ok" Grid.Row="5" Content="OK" Width="150" Height="30" Click="btn_Ok_Click" Margin="5,0,0,0" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
