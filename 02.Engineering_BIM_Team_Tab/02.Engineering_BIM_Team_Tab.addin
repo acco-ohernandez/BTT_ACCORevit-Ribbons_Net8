@@ -21,7 +21,7 @@
   <AddIn Type="Application">
     <Name>02.Engineering_BIM_Team_Tab</Name>
     <Assembly>02.Engineering_BIM_Team_Tab\02.Engineering_BIM_Team_Tab.dll</Assembly>
-    <FullClassName>Engineering_BIM_Team_Tab.App</FullClassName>
+    <FullClassName>Engineering_BIM_Team_Tab.App_Engineering_BIM_Team_Tab</FullClassName>
     <ClientId>068043bf-acbe-4abb-8bb7-f2eef1f38bc5</ClientId>
     <VendorId>com.ACCO ENGINEERED SYSTEMS</VendorId>
     <VendorDescription>ACCO ENGINEERED SYSTEMS, https://www.accoes.com/</VendorDescription>

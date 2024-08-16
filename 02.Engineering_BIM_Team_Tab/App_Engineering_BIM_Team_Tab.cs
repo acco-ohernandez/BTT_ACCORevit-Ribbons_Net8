@@ -2,31 +2,34 @@ using RevitRibbon_MainSourceCode;
 
 namespace Engineering_BIM_Team_Tab
 {
-    internal class App : IExternalApplication
+    internal class App_Engineering_BIM_Team_Tab : IExternalApplication
     {
         public Result OnStartup(UIControlledApplication app)
         {
-            //            // Get the path of the executing assembly (DLL)
-            //            string assembly_Dll_File = Assembly.GetExecutingAssembly().Location;
+            //#if RELEASE_2020 || RELEASE_2021 || RELEASE_2022 || RELEASE_2023 || RELEASE_2024 || RELEASE_2025
+            // Get the path of the executing assembly (DLL)
+            string assembly_Dll_File = Assembly.GetExecutingAssembly().Location;
 
-            //            // Get the directory path of the assembly
-            //            string xml_Ribbon_File_Path = Path.GetDirectoryName(assembly_Dll_File);
+            // Get the directory path of the assembly
+            string xml_Ribbon_File_Path = Path.GetDirectoryName(assembly_Dll_File);
 
-            //            // call the RibbonBuilder Class and pass it the path of the dll and *.ribbon path.
-            //            RibbonBuilder.build_ribbon(app, assembly_Dll_File, xml_Ribbon_File_Path);
-            //#if REVIT2020
-            //            Debug.Print("Revit2020");
-            //#elif REVIT2021
-            //        Debug.Print("Revit2021");
-            //#elif REVIT2022
-            //            Debug.Print("Revit2022");
-            //#elif REVIT2023
-            //            Debug.Print("Revit2023");
-            //#elif REVIT2024
-            //            Debug.Print("Revit2024");
-            //#elif REVIT2025
-            //            Debug.Print("Revit2025");
+            // call the RibbonBuilder Class and pass it the path of the dll and *.ribbon path.
+            RibbonBuilder.build_ribbon(app, assembly_Dll_File, xml_Ribbon_File_Path);
             //#endif
+
+#if REVIT2020
+            Debug.Print("Revit2020");
+#elif REVIT2021
+                    Debug.Print("Revit2021");
+#elif REVIT2022
+                        Debug.Print("Revit2022");
+#elif REVIT2023
+                        Debug.Print("Revit2023");
+#elif REVIT2024
+                        Debug.Print("Revit2024");
+#elif REVIT2025
+            Debug.Print("Revit2025");
+#endif
 
             ////=======================================================
             //// 1. Create ribbon tab
