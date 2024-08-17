@@ -1,5 +1,6 @@
 <Project>
 
+  <!-- Directory.Build.props -->
   <!-- Define configurations solution-wide -->
   <PropertyGroup>
     <UseWPF>true</UseWPF>
@@ -86,10 +87,36 @@
 
   <!-- Common Package References -->
   <ItemGroup>
-    <PackageReference Include="EPPlus" Version="7.2.2" />
+    <PackageReference Include="EPPlus" Version="7.2.2"/>
     <PackageReference Include="System.Drawing.Common" Version="8.0.3" IncludeAssets="build; compile" PrivateAssets="All" />
     <PackageReference Include="Revit_All_Main_Versions_API_x64" Version="$(RevitVersion).*" IncludeAssets="build; compile" PrivateAssets="All" />
   </ItemGroup>
+
+  <!--<Target Name="CopyNuGetPackageDlls"  BeforeTargets="PostBuildEvent">
+    <ItemGroup>
+      --><!-- Capture the paths to the DLLs of your NuGet packages --><!--
+      <PackageDlls Include="$(UserProfile)\.nuget\packages\epplus\7.2.2\lib\net462\EPPlus.dll" />
+      <PackageDlls Include="$(UserProfile)\.nuget\packages\epplus.interfaces\6.1.1\lib\net7.0\EPPlus.Interfaces.dll" />
+      <PackageDlls Include="$(UserProfile)\.nuget\packages\epplus.system.drawing\6.1.1\lib\net462\EPPlus.System.Drawing.dll" />
+      <PackageDlls Include="$(UserProfile)\.nuget\packages\microsoft.io.recyclablememorystream\3.0.0\lib\net6.0\Microsoft.IO.RecyclableMemoryStream.dll" />
+      <PackageDlls Include="$(UserProfile)\.nuget\packages\system.text.encoding.codepages\8.0.0\lib\net462\System.Text.Encoding.CodePages.dll" />
+      <PackageDlls Include="$(UserProfile)\.nuget\packages\system.drawing.common\8.0.3\lib\net462\System.Drawing.Common.dll" />
+      
+      --><!-- Add other DLLs as necessary --><!--
+    </ItemGroup>
+    <Copy SourceFiles="@(PackageDlls)" DestinationFolder="$(OutputPath)" />
+  </Target>-->
+  
+  
+  <!--<Target Name="CopyLocalReferences" AfterTargets="Build">
+    <ItemGroup>
+      <ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths)" />
+    </ItemGroup>
+    <Copy SourceFiles="@(ReferenceCopyLocalPaths)" DestinationFolder="$(OutputPath)" />
+  </Target>-->
+  <!--<PropertyGroup>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>-->
 
 
   <PropertyGroup>

@@ -80,6 +80,9 @@
 
   <!-- Import the shared project items -->
   <Import Project="..\RevitRibbon_MainSourceCode\RevitRibbon_MainSourceCode.projitems" Label="Shared" />
+  <ItemGroup>
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+  </ItemGroup>
 
   <!-- Common Project References -->
   <ItemGroup>

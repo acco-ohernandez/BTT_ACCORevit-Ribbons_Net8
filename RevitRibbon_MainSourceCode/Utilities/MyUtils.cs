@@ -1697,12 +1697,17 @@ PARAM	31fa72f6-6cd4-4ea8-9998-8923afa881e3	Dev_Text_1	TEXT		1	1		1	0";
         {
             // Set EPPlus license context
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;  // Set the license context for EPPlus to NonCommercial
+                                                                                       //#if REVIT2020 || REVIT2021 || REVIT2022 || REVIT2023 || REVIT2024
+                                                                                       //            // Register the CodePagesEncodingProvider for older Revit versions using .NET Framework
+                                                                                       //            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+                                                                                       //#endif
+                                                                                       // Open Excel file using EPPlus library
+            ExcelPackage excelFile = new ExcelPackage(filePath);
 
-            // Open Excel file using EPPlus library
-            ExcelPackage excelFile = new ExcelPackage(filePath);  // Create an instance of ExcelPackage by providing the file path
-                                                                  //ExcelWorkbook workbook = excelFile.Workbook;  // Get the workbook from the Excel package
-                                                                  // ExcelWorksheet worksheet = workbook.Worksheets[1];  // Get the first worksheet (index 0) from the workbook
-                                                                  //ExcelWorksheet worksheet = workbook.Worksheets.Add("Sheet1");
+            // Create an instance of ExcelPackage by providing the file path
+            //ExcelWorkbook workbook = excelFile.Workbook;  // Get the workbook from the Excel package
+            // ExcelWorksheet worksheet = workbook.Worksheets[1];  // Get the first worksheet (index 0) from the workbook
+            //ExcelWorksheet worksheet = workbook.Worksheets.Add("Sheet1");
 
             return excelFile;
         }
@@ -1721,7 +1726,19 @@ PARAM	31fa72f6-6cd4-4ea8-9998-8923afa881e3	Dev_Text_1	TEXT		1	1		1	0";
 
             return sheets;
         }
-
+        public static void StartProcess(string _excelFilePath)
+        {
+#if REVIT2025
+            using (Process process = new Process())
+            {
+                process.StartInfo.UseShellExecute = true;
+                process.StartInfo.FileName = _excelFilePath;
+                process.Start();
+            }
+#else
+            Process.Start(_excelFilePath);
+#endif
+        }
         public List<ExcelWorksheet> M_ReadExcelFile_1(string filePath)
         {
             // Set EPPlus license context

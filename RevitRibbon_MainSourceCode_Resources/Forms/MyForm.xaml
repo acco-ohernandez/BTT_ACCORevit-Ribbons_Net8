@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Content="Schedules Export" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
-        <Label Grid.Row="1" x:Name="lbl_ExportCount" Content="Exporting Schedules, Please wait..." HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" FontWeight="Bold"/>
+        <Label Grid.Row="1" x:FieldModifier="public" x:Name="lbl_ExportCount" Content="Exporting Schedules, Please wait..." HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" FontWeight="Bold"/>
 
 
         <!--<Button x:Name="btn_ExportOK" Grid.Row="2" Content="OK" Width="150" Height="30"/>-->

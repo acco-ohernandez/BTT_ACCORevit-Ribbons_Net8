@@ -32,6 +32,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\CreateNewLineStyles.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\DependentViewsBrowserTree.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\Common\Cmd_DependentViewsBrowserTree.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\Common\Cmd_ScheduleExport.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\MyUtils.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,3 +1,5 @@
+using OfficeOpenXml;
+
 using RevitRibbon_MainSourceCode;
 
 namespace Engineering_BIM_Team_Tab
@@ -6,6 +8,9 @@ namespace Engineering_BIM_Team_Tab
     {
         public Result OnStartup(UIControlledApplication app)
         {
+            // Set the license context to non-commercial to use EPPlus in non-commercial projects
+            //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
             //#if RELEASE_2020 || RELEASE_2021 || RELEASE_2022 || RELEASE_2023 || RELEASE_2024 || RELEASE_2025
             // Get the path of the executing assembly (DLL)
             string assembly_Dll_File = Assembly.GetExecutingAssembly().Location;
