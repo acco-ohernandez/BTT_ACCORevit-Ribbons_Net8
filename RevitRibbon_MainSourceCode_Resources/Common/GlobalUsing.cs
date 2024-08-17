@@ -8,3 +8,4 @@ global using Autodesk.Revit.Attributes;
 global using Autodesk.Revit.DB;
 global using Autodesk.Revit.UI;
 
+global using MessageBox = System.Windows.MessageBox;

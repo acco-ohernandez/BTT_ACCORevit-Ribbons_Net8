@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Version 1.2.0 2024-03-05 -->
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>02.Engineering_BIM_Team_Tab</Name>
+    <Assembly>
+      "C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Engineering\BIM Team\2021\02.Engineering_BIM_Team_Tab.dll"</Assembly>
+    <ClientId>EC05DFF9-32AA-440A-807E-A07D9F8F3422</ClientId>
+    <FullClassName>Engineering_BIM_Team_Tab.App_Engineering_BIM_Team_Tab</FullClassName>
+    <VendorId>Orlando R Hernandez</VendorId>
+    <VendorDescription>ACCOES, http://accoes.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>

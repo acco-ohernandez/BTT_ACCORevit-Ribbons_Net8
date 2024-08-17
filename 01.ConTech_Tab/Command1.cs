@@ -35,8 +35,8 @@
                     buttonInternalName,
                     buttonTitle,
                     methodBase,
-                    Properties.Resources.Blue_32,
-                    Properties.Resources.Blue_16,
+                    RevitRibbon_MainSourceCode_Resources.Properties.Resources.Blue_32,
+                    RevitRibbon_MainSourceCode_Resources.Properties.Resources.Blue_16,
                     "This is a tooltip for Button 1");
 
                 return myButtonData1.Data;

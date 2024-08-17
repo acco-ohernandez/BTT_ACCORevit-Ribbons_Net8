@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Version 1.3.0 2024-07-31 -->
+<tab name="BIM Team">
+  <panel name="BIM Team">
+    <stackeditems>
+      <button name="About"
+        classname="RevitRibbon_MainSourceCode.Cmd_About"
+        text="About"
+        tooltip="Latest Version: 1.3.0 2024-07-31"
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ACCO_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ACCO_32x32.png"
+        tooltipimage=""
+        contexthelp=""/>
+    </stackeditems>
+  </panel>
+
+
+
+  <panel name="PyRevit Tools">
+    <stackeditems>
+      <pulldownbuttons name="Views" image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CopyVT_32x32.png">
+        <button name="Copy View Templates to Other Open Models"
+          classname="RevitRibbon_MainSourceCode.Cmd_CopyViewTemplates"
+          text="Copy View Templates to Other Open Models"
+          tooltip="Allows the user to copy selected View Templates from current Revit model to other open Revit models of the users choosing."
+          image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CopyVT_16x16.png"
+          largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CopyVT_32x32.png"
+          tooltipimage=""
+          contexthelp=""/>
+      </pulldownbuttons>
+    </stackeditems>
+  </panel>
+  
+  <panel name="Initial Setup">
+
+    <stackeditems>
+      <button name="CreateBIMSetupView"
+        classname="RevitRibbon_MainSourceCode.Cmd_CreateBimSetupView"
+        text="Create
+BIM Setup View"
+        tooltip="Create the BIM Setup View."
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\BimSetup_96dpi_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\BimSetup_96dpi_32x32.png"
+        tooltipimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\BimSetup_96dpi_192x192.png"
+        contexthelp=""/>
+    </stackeditems>
+
+    <stackeditems>
+      <button name="btn_ScopeBoxGrid"
+        classname="RevitRibbon_MainSourceCode.Cmd_ScopeBoxGrid"
+        text="Scope Box
+Grid"
+        tooltip="This button will allow you to create a grid of scope boxes based on the number of columns and rows required.
+You will first have to create a desired size scope box, then select it in order to create a Grid of Scope Boxes.
+
+STEP 1: Create first scope box
+STEP 2: Select scope box
+STEP 3: Click Scope Box Grid button
+STEP 4: Specify the amount of columns, rows and the horizontal, vertical overlapping distances"
+
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ScopeBoxGrids_96dpi_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ScopeBoxGrids_96dpi_32x32.png"
+        tooltipimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ScopeBoxGrids_96dpi_192x192.png"
+        contexthelp=""/>
+    </stackeditems>
+
+    <stackeditems>
+      <button name="btn_RenameScopeBoxes"
+        classname="RevitRibbon_MainSourceCode.Cmd_RenameScopeBoxes"
+        text="Rename
+Scope Boxes"
+        tooltip="This button will rename all selected ScopeBoxes.
+OPTIONS:
+1. You can either pre-select a group of scopeboxes before clicking the button
+ OR
+2. click the button first and select the individual scopeboxes then hit ESC to continue"
+
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\RenameScopeBoxes_96dpi_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\RenameScopeBoxes_96dpi_32x32.png"
+        tooltipimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\RenameScopeBoxes_96dpi_192x192.png"
+        contexthelp=""/>
+    </stackeditems>
+
+    <stackeditems>
+      <button name="btn_CreateDependentScopeView"
+        classname="RevitRibbon_MainSourceCode.Cmd_CreateDependentScopeView"
+        text="Create
+Dependent Views"
+        tooltip="This button will create dependent views of the Current Active view based on the number of Scope Boxes shown."
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CreateDependentViews_96dpi_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CreateDependentViews_96dpi_32x32.png"
+        tooltipimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CreateDependentViews_96dpi_192x192.png"
+        contexthelp=""/>
+    </stackeditems>
+
+    <stackeditems>
+      <button name="btn_GridDimensions"
+        classname="RevitRibbon_MainSourceCode.Cmd_GridDimensions"
+        text="Grid
+Dimensions"
+        tooltip="This button will create dimensions for horizontal and vertical grid lines. Additionally, when scope boxes are selected, it will create linear dimensions above and to the right for all grids within each Scope Box. All dimensions created will use the GRID DIMENSIONS style to differentiate themselves from other standard dimension styles."
+
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\DimensionGrids_96dpi_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\DimensionGrids_96dpi_32x32.png"
+        tooltipimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\DimensionGrids_96dpi_192x192.png"
+        contexthelp=""/>
+    </stackeditems>
+
+    <stackeditems>
+      <button name="btn_MatchlineReferenceLines"
+        classname="RevitRibbon_MainSourceCode.Cmd_CreateMatchlineReference"
+        text="Matchline
+Detail Lines"
+        tooltip="This button will create intersecting detail lines between selected scope boxes. These detail lines can then be used as references when creating match lines using Revit’s native Match Line function. Note: Only use this in a non-plotting view to avoid any confusion."
+
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\MatchLineReference_96dpi_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\MatchLineReference_96dpi_32x32.png"
+        tooltipimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\MatchLineReference_96dpi_192x192.png"
+        contexthelp=""/>
+    </stackeditems>
+
+    <stackeditems>
+      <button name="btn_CreateViewReferencesDuplicates"
+        classname="RevitRibbon_MainSourceCode.Cmd_CreateViewReferencesDuplicates"
+        text="Place
+View References"
+        tooltip="This button will create Duplicates of an existing View Reference and place them at the intersecting corners of scope boxes.
+        Step 1. Make sure there is at least one existing View Reference on the current view.
+        Step 2. You must select at least two overlapped scope boxes.
+        Step 3. Click this button"
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ViewReferenceCopies_96dpi_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ViewReferenceCopies_96dpi_32x32.png"
+        tooltipimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ViewReferenceCopies_96dpi_376x192.png"
+        contexthelp=""/>
+    </stackeditems>
+  </panel>
+  
+  
+  <panel name="Views Setup">
+    
+    <stackeditems>
+      <button name="Cmd_CreateParentPlotViews"
+        classname="RevitRibbon_MainSourceCode.Cmd_CreateParentPlotViews"
+        text="Create
+Parent Views"
+        tooltip="This will create parent views based on the level and view template selected by the user."
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CreateParentViews_96dpi_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CreateParentViews_96dpi_32x32.png"
+        tooltipimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CreateParentViews_96dpi_192x192.png"
+        contexthelp=""/>
+    </stackeditems>
+
+    <stackeditems>
+      <button name="btn_Cmd_UpdateAppliedDependentViews"
+       classname="RevitRibbon_MainSourceCode.Cmd_UpdateAppliedDependentViews"
+       text="Update Applied
+Dependent Views"
+       tooltip="This button will update applied dependent views selected by the user by adding the appropriate Scope Box and renaming each view accordingly."
+       image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\UpdateDependentViews_96dpi_16x16.png"
+       largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\UpdateDependentViews_96dpi_32x32.png"
+       tooltipimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\UpdateDependentViews_96dpi_192x192.png"
+       contexthelp=""/>
+    </stackeditems>
+
+    <stackeditems>
+      <button name="btn_Cmd_CopyDimsToParentViews"
+       classname="RevitRibbon_MainSourceCode.Cmd_CopyDimsToParentViews"
+       text="Copy Dims to
+Parent Views"
+       tooltip="This button will copy dimensions from the 'BIM Setup View' to the parent views selected by the user."
+       image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CopyDimensions2_96dpi_16x16.png"
+       largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CopyDimensions2_96dpi_32x32.png"
+       tooltipimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CopyDimensions2_96dpi_192x192.png"
+       contexthelp=""/>
+    </stackeditems>
+
+    <stackeditems>
+      <button name="btn_CleanDependentDims"
+        classname="RevitRibbon_MainSourceCode.Cmd_CleanDependentViewDims"
+        text="Clean Dependent
+View Dims"
+        tooltip="This button will go through the selected dependent views and hide any unnecessary dimensions that uses the 'GRID DIMENSIONS' style. Dimensions will be cleaned accordingly based on the selected dependent views’ crop boxes."
+
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\MatchLineReference_96dpi_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CleanDimensions_96dpi_32x32.png"
+        tooltipimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\CleanDimensions_96dpi_192x192.png"
+        contexthelp=""/>
+    </stackeditems>
+  </panel>
+
+</tab>

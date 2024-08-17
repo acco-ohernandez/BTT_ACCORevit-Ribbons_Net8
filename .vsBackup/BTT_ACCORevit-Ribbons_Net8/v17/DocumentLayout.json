@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Visual Studio Files\\BTT_ACCORevit-Ribbons_Net8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED4FF28-39B7-4911-909C-C3A0E234C325}|03.Engineering_Mechanical_Tab\\03.Engineering_Mechanical_Tab.csproj|c:\\visual studio files\\btt_accorevit-ribbons_net8\\revitribbon_mainsourcecode\\unique button classes\\bim team\\newprojectsetups\\cmd_renamescopeboxes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED4FF28-39B7-4911-909C-C3A0E234C325}|03.Engineering_Mechanical_Tab\\03.Engineering_Mechanical_Tab.csproj|solutionrelative:revitribbon_mainsourcecode\\unique button classes\\bim team\\newprojectsetups\\cmd_renamescopeboxes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ED4FF28-39B7-4911-909C-C3A0E234C325}|03.Engineering_Mechanical_Tab\\03.Engineering_Mechanical_Tab.csproj|c:\\visual studio files\\btt_accorevit-ribbons_net8\\03.engineering_mechanical_tab\\command1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED4FF28-39B7-4911-909C-C3A0E234C325}|03.Engineering_Mechanical_Tab\\03.Engineering_Mechanical_Tab.csproj|solutionrelative:03.engineering_mechanical_tab\\command1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 333,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{2227c503-8daf-44e6-bff6-222088de83e0}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a0c5197d-0ac7-4b63-97cd-8872a789d233}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cmd_RenameScopeBoxes.cs",
+              "DocumentMoniker": "C:\\Visual Studio Files\\BTT_ACCORevit-Ribbons_Net8\\RevitRibbon_MainSourceCode\\Unique Button Classes\\BIM Team\\NewProjectSetups\\Cmd_RenameScopeBoxes.cs",
+              "RelativeDocumentMoniker": "RevitRibbon_MainSourceCode\\Unique Button Classes\\BIM Team\\NewProjectSetups\\Cmd_RenameScopeBoxes.cs",
+              "ToolTip": "C:\\Visual Studio Files\\BTT_ACCORevit-Ribbons_Net8\\RevitRibbon_MainSourceCode\\Unique Button Classes\\BIM Team\\NewProjectSetups\\Cmd_RenameScopeBoxes.cs",
+              "RelativeToolTip": "RevitRibbon_MainSourceCode\\Unique Button Classes\\BIM Team\\NewProjectSetups\\Cmd_RenameScopeBoxes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T20:19:18.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Command1.cs",
+              "DocumentMoniker": "C:\\Visual Studio Files\\BTT_ACCORevit-Ribbons_Net8\\03.Engineering_Mechanical_Tab\\Command1.cs",
+              "RelativeDocumentMoniker": "03.Engineering_Mechanical_Tab\\Command1.cs",
+              "ToolTip": "C:\\Visual Studio Files\\BTT_ACCORevit-Ribbons_Net8\\03.Engineering_Mechanical_Tab\\Command1.cs",
+              "RelativeToolTip": "03.Engineering_Mechanical_Tab\\Command1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T20:19:18.959Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 229,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

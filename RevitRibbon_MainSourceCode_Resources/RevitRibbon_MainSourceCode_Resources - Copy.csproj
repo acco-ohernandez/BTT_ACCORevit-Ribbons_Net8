@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>RevitRibbon_MainSourceCode_Resources</RootNamespace>   <!-- Updated namespace -->
+    <RootProjectName>RevitRibbon_MainSourceCode_Resources</RootProjectName>
+  </PropertyGroup>
+  
+	<ItemGroup>
+	  <Resource Include="Resources\Blue_16.png" />
+	  <Resource Include="Resources\Blue_32.png" />
+	  <Resource Include="Resources\Green_16.png" />
+	  <Resource Include="Resources\Green_32.png" />
+	  <Resource Include="Resources\Red_16.png" />
+	  <Resource Include="Resources\Red_32.png" />
+	  <Resource Include="Resources\Yellow_16.png" />
+	  <Resource Include="Resources\Yellow_32.png" />
+	</ItemGroup>
+  
+</Project>

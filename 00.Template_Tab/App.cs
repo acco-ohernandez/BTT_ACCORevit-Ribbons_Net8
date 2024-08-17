@@ -1,6 +1,9 @@
 using RevitRibbon_MainSourceCode;
 
 using RevitRibbon_MainSourceCode_Resources;
+//You can run MSBuild from the command line with the /pp (preprocessor) switch to see the evaluated values of properties in your project file:
+//msbuild YourProject.csproj /pp:out.txt
+
 
 namespace Template_Tab
 {

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copied from: 00.RevitRibbon_MainSourceCode\Templates\ButtonStructureTemplate.ribbon File and Version  -->
+<!-- Version 1.0.0 2023-10-20 -->
+<tab name="ENG Mechanical">
+
+  <panel name="ENG Mechanical">
+      <stackeditems>
+        <button name="About"
+          classname="RevitRibbon_MainSourceCode.Cmd_About"
+          text="About"
+          tooltip="Latest Version: 1.0.0 2023-10-20"
+          image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ACCO_16x16.png"
+          largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ACCO_32x32.png"
+          tooltipimage=""
+          contexthelp=""/>
+      </stackeditems>
+
+  </panel>
+
+</tab>

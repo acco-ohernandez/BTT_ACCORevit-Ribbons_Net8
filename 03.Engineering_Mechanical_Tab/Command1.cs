@@ -15,8 +15,6 @@ namespace Engineering_Mechanical_Tab
 
             // Your code goes here
             TaskDialog.Show("INFO", $"Hello from {Utils.GetDeclaringTypeName1()}");
-            Cmd_CreateBimSetupView cmd_CreateBimSetupView = new Cmd_CreateBimSetupView();
-            cmd_CreateBimSetupView.Execute(commandData, ref message, elements);
 
             return Result.Succeeded;
         }
@@ -39,8 +37,8 @@ namespace Engineering_Mechanical_Tab
                     buttonInternalName,
                     buttonTitle,
                     methodBase,
-                    Properties.Resources.Blue_32,
-                    Properties.Resources.Blue_16,
+                    RevitRibbon_MainSourceCode_Resources.Properties.Resources.Blue_32,
+                    RevitRibbon_MainSourceCode_Resources.Properties.Resources.Blue_16,
                     "This is a tooltip for Button 1");
 
                 return myButtonData1.Data;
