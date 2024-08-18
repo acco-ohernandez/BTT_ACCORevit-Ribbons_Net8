@@ -124,6 +124,10 @@ namespace RevitRibbon_MainSourceCode
                 }
                 t.RollBack();
             }
+#if REVIT2025
+            // Register the CodePagesEncodingProvider to support additional encodings
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+#endif
             excelFile.Save();
             excelFile.Dispose();
             StartProcess(_excelFilePath);
