@@ -81,16 +81,10 @@
 
   <Import Project="..\RevitRibbon_MainSourceCode\RevitRibbon_MainSourceCode.projitems" Label="Shared" />
 
+
   <!-- Common Project References -->
   <ItemGroup>
     <ProjectReference Include="..\RevitRibbon_MainSourceCode_Resources\RevitRibbon_MainSourceCode_Resources.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-  
-    <!--<PackageReference Update="System.Drawing.Common" Version="8.0.8">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>compile; build</IncludeAssets>
-    </PackageReference>-->
   </ItemGroup>
 
 </Project>

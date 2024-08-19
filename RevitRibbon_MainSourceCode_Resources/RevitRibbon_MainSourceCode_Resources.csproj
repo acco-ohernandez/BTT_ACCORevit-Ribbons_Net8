@@ -14,7 +14,7 @@
 	  <EmbeddedResource Include="Resources\Yellow_16.png" />
 	  <EmbeddedResource Include="Resources\Yellow_32.png" />
 	</ItemGroup>
-  
+ 
   
 	<ItemGroup>
 	  <Compile Update="Properties\Resources.Designer.cs">

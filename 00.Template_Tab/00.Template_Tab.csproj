@@ -80,7 +80,7 @@
 
   <!-- Import the shared project items -->
   <Import Project="..\RevitRibbon_MainSourceCode\RevitRibbon_MainSourceCode.projitems" Label="Shared" />
-  
+
 
   <!-- Common Project References -->
   <ItemGroup>
