@@ -125,7 +125,7 @@ namespace RevitRibbon_MainSourceCode
                 t.RollBack();
             }
 #if REVIT2025
-            // Register the CodePagesEncodingProvider to support additional encodings
+            // Register the CodePagesEncodingProvider to support additional encodings. This is required for .NET8 Revit 2025
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
 #endif
             excelFile.Save();

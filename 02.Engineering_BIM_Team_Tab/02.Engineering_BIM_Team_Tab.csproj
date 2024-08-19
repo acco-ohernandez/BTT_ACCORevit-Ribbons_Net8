@@ -81,14 +81,6 @@
 
   <Import Project="..\RevitRibbon_MainSourceCode\RevitRibbon_MainSourceCode.projitems" Label="Shared" />
 
-  <ItemGroup>
-    <Compile Remove="4d1ff7321eb0731aae678ed9ea019375c81c83badd7a50c85d81d663793b5cd5\**" />
-    <EmbeddedResource Remove="4d1ff7321eb0731aae678ed9ea019375c81c83badd7a50c85d81d663793b5cd5\**" />
-    <None Remove="4d1ff7321eb0731aae678ed9ea019375c81c83badd7a50c85d81d663793b5cd5\**" />
-    <Page Remove="4d1ff7321eb0731aae678ed9ea019375c81c83badd7a50c85d81d663793b5cd5\**" />
-  </ItemGroup>
-
-
   <!-- Common Project References -->
   <ItemGroup>
     <ProjectReference Include="..\RevitRibbon_MainSourceCode_Resources\RevitRibbon_MainSourceCode_Resources.csproj" />

@@ -15,7 +15,7 @@
   </panel>
 
   <panel name="BIMOne">
-    <!--<stackeditems>
+    <stackeditems>
       <button name="btn_ScheduleImport"
         classname="RevitRibbon_MainSourceCode.Cmd_ScheduleImport"
         text="Schedule Import"
@@ -24,7 +24,7 @@
         largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\Schedules_In_32.png"
         tooltipimage=""
         contexthelp=""/>
-    </stackeditems>-->
+    </stackeditems>
 
     <stackeditems>
       <button name="btn_ScheduleExport"
