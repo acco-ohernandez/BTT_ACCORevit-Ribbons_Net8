@@ -1697,11 +1697,16 @@ PARAM	31fa72f6-6cd4-4ea8-9998-8923afa881e3	Dev_Text_1	TEXT		1	1		1	0";
         {
             // Set EPPlus license context
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;  // Set the license context for EPPlus to NonCommercial
-                                                                                       //#if REVIT2020 || REVIT2021 || REVIT2022 || REVIT2023 || REVIT2024
-                                                                                       //            // Register the CodePagesEncodingProvider for older Revit versions using .NET Framework
-                                                                                       //            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
-                                                                                       //#endif
-                                                                                       // Open Excel file using EPPlus library
+#if REVIT2025
+            // Register the CodePagesEncodingProvider to support additional encodings. This is required for .NET8 Revit 2025
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+#endif
+
+            //#if REVIT2020 || REVIT2021 || REVIT2022 || REVIT2023 || REVIT2024
+            //            // Register the CodePagesEncodingProvider for older Revit versions using .NET Framework
+            //            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+            //#endif
+            // Open Excel file using EPPlus library
             ExcelPackage excelFile = new ExcelPackage(filePath);
 
             // Create an instance of ExcelPackage by providing the file path
@@ -1743,6 +1748,10 @@ PARAM	31fa72f6-6cd4-4ea8-9998-8923afa881e3	Dev_Text_1	TEXT		1	1		1	0";
         {
             // Set EPPlus license context
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;  // Set the license context for EPPlus to NonCommercial
+#if REVIT2025
+            // Register the CodePagesEncodingProvider to support additional encodings. This is required for .NET8 Revit 2025
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+#endif
 
             List<ExcelWorksheet> sheets = new List<ExcelWorksheet>();
 

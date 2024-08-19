@@ -353,6 +353,11 @@ namespace RevitRibbon_MainSourceCode
                 string excelFilePath = saveFileDialog.FileName;
                 ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
 
+#if REVIT2025
+                // Register the CodePagesEncodingProvider to support additional encodings. This is required for .NET8 Revit 2025
+                System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+#endif
+
                 // Create a new Excel package
                 using (var package = new ExcelPackage())
                 {
@@ -445,6 +450,10 @@ namespace RevitRibbon_MainSourceCode
         public static void FormatObjectStylesExcelExport(string filePath)
         {
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+#if REVIT2025
+            // Register the CodePagesEncodingProvider to support additional encodings. This is required for .NET8 Revit 2025
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+#endif
 
             // Load the Excel file using EPPlus
             using (var package = new ExcelPackage(new FileInfo(filePath)))
@@ -501,6 +510,10 @@ namespace RevitRibbon_MainSourceCode
                     string excelFilePath = saveFileDialog.FileName;
                     // Set the license context to NonCommercial
                     ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+#if REVIT2025
+                    // Register the CodePagesEncodingProvider to support additional encodings. This is required for .NET8 Revit 2025
+                    System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+#endif
                     // Create a new Excel package
                     using (var package = new ExcelPackage())
                     {
@@ -582,6 +595,10 @@ namespace RevitRibbon_MainSourceCode
             using (var package = new ExcelPackage(new FileInfo(excelFilePath)))
             {
                 ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+#if REVIT2025
+                // Register the CodePagesEncodingProvider to support additional encodings. This is required for .NET8 Revit 2025
+                System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+#endif
                 var worksheet = package.Workbook.Worksheets[0];
 
                 // Bold the header row and set the font size

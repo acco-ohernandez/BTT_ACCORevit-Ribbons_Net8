@@ -26,6 +26,14 @@
                 largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
                 tooltipimage=""
                 contexthelp=""/>
+        <button name="Object Styles - Annotation Objects"
+                classname="RevitRibbon_MainSourceCode.Cmd_AnnotationObjStyles_Export"
+                text="Object Styles - Annotation Objects"
+                tooltip="Exports Annotation Object Styles to Excel"
+                image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_16x16.png"
+                largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
+                tooltipimage=""
+                contexthelp=""/>
       
       </pulldownbuttons>
     </stackeditems>
