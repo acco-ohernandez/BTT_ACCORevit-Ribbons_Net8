@@ -13,10 +13,14 @@
       set MSBUILDPROJECTDIR=$(MSBuildProjectDirectory)
       set OUTPUTBINDIR=%MSBUILDPROJECTDIR%\$(OutputPath)
       set REVITVERSION=$(RevitVersion)
-      set APPDATA_AUTODESK_REVIT_ADDINS_YEAR=$(AppData)\Autodesk\REVIT\Addins\%REVITVERSION%
-      set APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME=%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%\%ROOTPROJECTNAME%
-      set DotAddingFileDir=C:\MyRevitAddins\%ROOTPROJECTNAME%\%REVITVERSION%
-      set RibbonXmlAndDLLFolder=C:\MyRevitAddins\%ROOTPROJECTNAME%\%REVITVERSION%
+
+      REM set APPDATA_AUTODESK_REVIT_ADDINS_YEAR=$(AppData)\Autodesk\REVIT\Addins\%REVITVERSION%
+      REM set APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME=%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%\%ROOTPROJECTNAME%
+      set APPDATA_AUTODESK_REVIT_ADDINS_YEAR=C:\ProgramData\Autodesk\Revit\Addins\%REVITVERSION%
+      set APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME=C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\ConTech\%REVITVERSION%
+
+      set DotAddingFileDir=C:\ProgramData\Autodesk\Revit\Addins\%REVITVERSION%
+      set RibbonXmlAndDLLFolder=C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\ConTech\%REVITVERSION%
 
       echo ******** Project Info *********
       echo *** Configuration     : $(Configuration)
@@ -37,15 +41,16 @@
       echo *** Directory already exists: %APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%
       )
       echo.
-      echo *** Copying .addin files
+      echo *** Copying *Tab_%REVITVERSION%.addin files
       echo --- from: %MSBUILDPROJECTDIR%
       echo --- to  : %APPDATA_AUTODESK_REVIT_ADDINS_YEAR%
-      copy "%MSBUILDPROJECTDIR%\*.addin" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%"
+      copy "%MSBUILDPROJECTDIR%\*Tab_%REVITVERSION%.addin" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%"
       echo.
       echo *** Copying .dll files
       echo --- from: $(OutputPath)
       echo --- to  :%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%
       copy "%OUTPUTBINDIR%\*.dll" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%"
+      copy "%MSBUILDPROJECTDIR%\*.ribbon" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%"
       )
 
       echo.
@@ -61,8 +66,8 @@
       mkdir "%DotAddingFileDir%"
       )
       echo.
-      echo ******** Copying .addin files to: %DotAddingFileDir%
-      copy "%MSBUILDPROJECTDIR%\*.addin" "%DotAddingFileDir%\"
+      echo ******** Copying *%REVITVERSION%.addin files to: %DotAddingFileDir%
+      copy "%MSBUILDPROJECTDIR%\*%REVITVERSION%.addin" "%DotAddingFileDir%\"
 
       if not exist "%RibbonXmlAndDLLFolder%" (
       echo *** Creating %RibbonXmlAndDLLFolder%

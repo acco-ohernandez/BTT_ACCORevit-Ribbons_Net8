@@ -2,31 +2,34 @@ using RevitRibbon_MainSourceCode;
 
 namespace ConTech_Tab
 {
-    internal class App : IExternalApplication
+    internal class App_ConTech_Tab : IExternalApplication
     {
-        public Result OnStartup(UIControlledApplication app)
+        public Result OnStartup(UIControlledApplication application)
         {
-            //            // Get the path of the executing assembly (DLL)
-            //            string assembly_Dll_File = Assembly.GetExecutingAssembly().Location;
+            //// Create ribbon  - Example of how you should point to a different path for the dll and ribbon files
+            //string assembly_Dll_File = @"C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Engineering\BIM Team\RevitRibbon_MainSourceCode.dll";
+            //string xml_Ribbon_File_Path = @"C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Engineering\BIM Team";
+            //or
 
-            //            // Get the directory path of the assembly
-            //            string xml_Ribbon_File_Path = Path.GetDirectoryName(assembly_Dll_File);
+            // Get the path of the executing assembly (DLL) - This way gets them dynamically from the home directory of the assembly file (dll)
+            string assembly_Dll_File = Assembly.GetExecutingAssembly().Location;
 
-            //            // call the RibbonBuilder Class and pass it the path of the dll and *.ribbon path.
-            //            RibbonBuilder.build_ribbon(app, assembly_Dll_File, xml_Ribbon_File_Path);
-            //#if REVIT2020
-            //            Debug.Print("Revit2020");
-            //#elif REVIT2021
-            //        Debug.Print("Revit2021");
-            //#elif REVIT2022
-            //            Debug.Print("Revit2022");
-            //#elif REVIT2023
-            //            Debug.Print("Revit2023");
-            //#elif REVIT2024
-            //            Debug.Print("Revit2024");
-            //#elif REVIT2025
-            //            Debug.Print("Revit2025");
-            //#endif
+            // Get the directory path of the assembly
+            string xml_Ribbon_File_Path = Path.GetDirectoryName(assembly_Dll_File);
+
+            // call the RibbonBuilder Class and pass it the path of the dll and *.ribbon path.
+            RibbonBuilder.build_ribbon(application, assembly_Dll_File, xml_Ribbon_File_Path);
+#if REVIT2020
+        Debug.Print("Revit2020");
+#elif REVIT2021
+        Debug.Print("Revit2021");
+#elif REVIT2022
+            Debug.Print("Revit2022");
+#elif REVIT2023
+            Debug.Print("Revit2023");
+#elif REVIT2024
+            Debug.Print("Revit2024");
+#endif
 
             ////=======================================================
             //// 1. Create ribbon tab
@@ -34,7 +37,7 @@ namespace ConTech_Tab
             //string panelName = "_01.ConTech_Tab"; // This is the DLL name
             //try
             //{
-            //    app.CreateRibbonTab(tabName);
+            //    application.CreateRibbonTab(tabName);
             //}
             //catch (Exception)
             //{
@@ -42,7 +45,7 @@ namespace ConTech_Tab
             //}
 
             //// 2. Create ribbon panel 
-            //RibbonPanel? panel = Utils.CreateRibbonPanel(app, tabName, panelName);
+            //RibbonPanel? panel = Utils.CreateRibbonPanel(application, tabName, panelName);
 
             //if (panel is null)
             //{

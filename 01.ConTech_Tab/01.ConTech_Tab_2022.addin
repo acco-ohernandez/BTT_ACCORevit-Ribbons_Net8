@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Version 1.2.0 2024-03-05 -->
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>01.ConTech_Tab</Name>
+    <Assembly>"C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\ConTech\2022\01.ConTech_Tab.dll"</Assembly>
+    <ClientId>4C575DF0-33AF-49A0-94E1-1D9ECDBABB89</ClientId>
+    <FullClassName>ConTech_Tab.App_ConTech_Tab</FullClassName>
+    <VendorId>Orlando R Hernandez</VendorId>
+    <VendorDescription>ACCOES, http://accoes.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
