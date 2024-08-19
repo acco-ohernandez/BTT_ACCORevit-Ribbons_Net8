@@ -34,6 +34,14 @@
                 largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
                 tooltipimage=""
                 contexthelp=""/>
+        <button name="Object Styles - Imported Objects"
+                classname="RevitRibbon_MainSourceCode.Cmd_Model_ImportedObjects_Export"
+                text="Object Styles - Imported Objects"
+                tooltip="Exports Imported Object Styles to Excel"
+                image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_16x16.png"
+                largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
+                tooltipimage=""
+                contexthelp=""/>
       
       </pulldownbuttons>
     </stackeditems>
