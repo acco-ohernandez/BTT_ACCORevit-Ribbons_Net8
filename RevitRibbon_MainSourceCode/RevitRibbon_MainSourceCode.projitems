@@ -35,6 +35,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\Common\Cmd_ScheduleExport.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\Common\Cmd_ScheduleImport.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\ConTech\Cmd_AnnotationObjStyles_Export.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\ConTech\Cmd_CreateCatalogPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\ConTech\Cmd_DimensionTypes_Export.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\ConTech\Cmd_LinesObjStyles_Export.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\ConTech\Cmd_ModelObjStyles_Export.cs" />

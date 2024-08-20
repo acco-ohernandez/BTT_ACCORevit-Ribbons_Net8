@@ -80,5 +80,17 @@
         contexthelp=""/>
     </stackeditems>
 
+    <stackeditems>
+      <button name="btn_CreateCatalogPage"
+        classname="RevitRibbon_MainSourceCode.Cmd_CreateCatalogPage"
+        text="Create
+Catalog Page"
+        tooltip="This will create a catalog page and more..."
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\Catalog_96dpi_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\Catalog_96dpi_32x32.png"
+        tooltipimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\Catalog_96dpi_192x192.png"
+        contexthelp=""/>
+    </stackeditems>
+
   </panel>
 </tab>
