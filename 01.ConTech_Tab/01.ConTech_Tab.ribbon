@@ -42,6 +42,14 @@
                 largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
                 tooltipimage=""
                 contexthelp=""/>
+        <button name="Lines Styles"
+                classname="RevitRibbon_MainSourceCode.Cmd_LinesObjStyles_Export"
+                text="Lines Styles"
+                tooltip="Exports Line Styles to Excel"
+                image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_16x16.png"
+                largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
+                tooltipimage=""
+                contexthelp=""/>
       
       </pulldownbuttons>
     </stackeditems>
