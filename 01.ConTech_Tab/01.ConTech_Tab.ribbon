@@ -50,6 +50,14 @@
                 largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
                 tooltipimage=""
                 contexthelp=""/>
+        <button name="Text Types"
+                classname="RevitRibbon_MainSourceCode.Cmd_TextTypes_Export"
+                text="Text Types"
+                tooltip="Exports Text Types to Excel"
+                image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_16x16.png"
+                largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
+                tooltipimage=""
+                contexthelp=""/>
       
       </pulldownbuttons>
     </stackeditems>

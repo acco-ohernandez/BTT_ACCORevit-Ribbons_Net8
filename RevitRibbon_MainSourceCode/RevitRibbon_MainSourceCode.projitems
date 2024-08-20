@@ -38,6 +38,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\ConTech\Cmd_LinesObjStyles_Export.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\ConTech\Cmd_ModelObjStyles_Export.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\ConTech\Cmd_Model_ImportedObjects_Export.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\ConTech\Cmd_TextTypes_Export.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\ExportersCommonTools.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\MyUtils.cs" />
   </ItemGroup>
