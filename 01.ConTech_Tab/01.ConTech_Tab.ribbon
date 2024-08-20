@@ -58,10 +58,27 @@
                 largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
                 tooltipimage=""
                 contexthelp=""/>
-      
+        <button name="Dimension Styles"
+                  classname="RevitRibbon_MainSourceCode.Cmd_DimensionTypes_Export"
+                  text="Dimension Styles"
+                  tooltip="Exports Dimension Styles to Excel"
+                  image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_16x16.png"
+                  largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ExportArrow_32x32.png"
+                  tooltipimage=""
+                  contexthelp=""/>
       </pulldownbuttons>
     </stackeditems>
 
+    <stackeditems>
+      <button name="Reset 3D View"
+        classname="RevitRibbon_MainSourceCode.Cmd_Reset3DView"
+        text="Reset 3D View"
+        tooltip="Resets the current 3D View by removing it's View Template (if there's one applied), hiding the Levels, and finishes with a ZoomToFit."
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\Reset3D_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\Reset3D_32x32.png"
+        tooltipimage=""
+        contexthelp=""/>
+    </stackeditems>
 
   </panel>
 </tab>
