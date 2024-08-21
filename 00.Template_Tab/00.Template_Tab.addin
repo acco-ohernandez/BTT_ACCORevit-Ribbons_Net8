@@ -1,6 +1,4 @@
-﻿<?xml version="1.0" 
-      
-        ing="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <RevitAddIns>
   <AddIn Type="Command">
     <Text>00.Template_Tab - Command 1</Text>

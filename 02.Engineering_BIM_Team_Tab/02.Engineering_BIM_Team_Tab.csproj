@@ -13,10 +13,15 @@
       set MSBUILDPROJECTDIR=$(MSBuildProjectDirectory)
       set OUTPUTBINDIR=%MSBUILDPROJECTDIR%\$(OutputPath)
       set REVITVERSION=$(RevitVersion)
-      set APPDATA_AUTODESK_REVIT_ADDINS_YEAR=$(AppData)\Autodesk\REVIT\Addins\%REVITVERSION%
-      set APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME=%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%\%ROOTPROJECTNAME%
-      set DotAddingFileDir=C:\MyRevitAddins\Engineering\BIM Team
-      set RibbonXmlAndDLLFolder=C:\MyRevitAddins\Engineering\BIM Team\%REVITVERSION%
+
+      REM set APPDATA_AUTODESK_REVIT_ADDINS_YEAR=$(AppData)\Autodesk\REVIT\Addins\%REVITVERSION%
+      REM set APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME=%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%\%ROOTPROJECTNAME%
+      set APPDATA_AUTODESK_REVIT_ADDINS_YEAR=C:\ProgramData\Autodesk\Revit\Addins\%REVITVERSION%
+      set APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME=C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Engineering\BIM Team\%REVITVERSION%
+
+      set DotAddingFileDir=C:\ProgramData\Autodesk\Revit\Addins\%REVITVERSION%
+      set RibbonXmlAndDLLFolder=C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Engineering\BIM Team\%REVITVERSION%
+
 
       echo ******** Project Info *********
       echo *** Configuration     : $(Configuration)
@@ -40,7 +45,7 @@
       echo *** Copying *Tab_%REVITVERSION%.addin files
       echo --- from: %MSBUILDPROJECTDIR%
       echo --- to  : %APPDATA_AUTODESK_REVIT_ADDINS_YEAR%
-      copy "%MSBUILDPROJECTDIR%\*Tab.addin" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%"
+      copy "%MSBUILDPROJECTDIR%\*Tab_%REVITVERSION%.addin" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%"
       echo.
       echo *** Copying .dll files
       echo --- from: $(OutputPath)

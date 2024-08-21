@@ -8,6 +8,10 @@
             UIApplication uiapp = commandData.Application;
             Document doc = uiapp.ActiveUIDocument.Document;
 
+
+            //RevitCommandId commandId = RevitCommandId.LookupPostableCommandId(PostableCommand.MirrorProject);
+            //uiapp.PostCommand(commandId);
+
             if (TaskDialog.Show("Info", "Copy ViewTemplates", TaskDialogCommonButtons.Ok) == TaskDialogResult.Ok)
             {
                 new Cmd_CopyViewTemplates().Execute(commandData, ref message, elements);

@@ -1,5 +1,4 @@
 <Project>
-
   <!-- Directory.Build.props -->
   <!-- Define configurations solution-wide -->
   <PropertyGroup>

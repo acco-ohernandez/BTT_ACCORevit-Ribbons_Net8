@@ -1,8 +1,6 @@
-using RevitRibbon_MainSourceCode;
-
-namespace ConTech_Tab
+namespace Engineering_Mechanical_Tab
 {
-    internal class App_ConTech_Tab : IExternalApplication
+    internal class App_Engineering_Mechanical_Tab : IExternalApplication
     {
         public Result OnStartup(UIControlledApplication application)
         {
@@ -76,6 +74,7 @@ namespace ConTech_Tab
 
             return Result.Succeeded;
         }
+
 
         public Result OnShutdown(UIControlledApplication a)
         {

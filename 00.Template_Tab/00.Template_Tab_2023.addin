@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Version 1.2.0 2024-03-05 -->
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>00.Template_Tab</Name>
+    <Assembly>"C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Template\2023\00.Template_Tab.dll"</Assembly>
+    <ClientId>5f073cef-674f-4173-94f6-963e3d7a7c52</ClientId>
+    <FullClassName>Template_Tab.App_Template_Tab</FullClassName>
+    <VendorId>Orlando R Hernandez</VendorId>
+    <VendorDescription>ACCOES, http://accoes.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>

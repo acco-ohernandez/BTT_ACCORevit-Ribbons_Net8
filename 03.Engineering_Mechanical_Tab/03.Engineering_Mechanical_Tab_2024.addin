@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Version 1.2.0 2024-03-05 -->
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>03.Engineering_Mechanical_Tab</Name>
+    <Assembly>
+      "C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Engineering\Mechanical\2024\03.Engineering_Mechanical_Tab.dll"</Assembly>
+    <ClientId>E6B5BBEE-BE5C-4722-9E32-0ACCA25D87A0</ClientId>
+    <FullClassName>Engineering_Mechanical_Tab.App_Engineering_Mechanical_Tab</FullClassName>
+    <VendorId>Orlando R Hernandez</VendorId>
+    <VendorDescription>ACCOES, http://accoes.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
