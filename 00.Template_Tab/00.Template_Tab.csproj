@@ -8,78 +8,82 @@
 
   <PropertyGroup>
     <PostBuildEvent>
-      echo ********* PostBuild Events Start *********
+      echo.
+      echo.
       set ROOTPROJECTNAME=$(RootProjectName)
+      echo ********* PostBuild Events Start. Project : %ROOTPROJECTNAME% *********
       set MSBUILDPROJECTDIR=$(MSBuildProjectDirectory)
       set OUTPUTBINDIR=%MSBUILDPROJECTDIR%\$(OutputPath)
       set REVITVERSION=$(RevitVersion)
 
-      REM set APPDATA_AUTODESK_REVIT_ADDINS_YEAR=$(AppData)\Autodesk\REVIT\Addins\%REVITVERSION%
-      REM set APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME=%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%\%ROOTPROJECTNAME%
-      set APPDATA_AUTODESK_REVIT_ADDINS_YEAR=C:\ProgramData\Autodesk\Revit\Addins\%REVITVERSION%
-      set APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME=C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Template\%REVITVERSION%
+      REM The following two lines have been "commented out/(REM)". They can be used if you want to output the addin and dll and ribbon files to the users Roaming folder
+      REM set PROGRAMDATA_AUTODESK_REVIT_ADDINS_YEAR=$(AppData)\Autodesk\REVIT\Addins\%REVITVERSION%
+      REM set REVIT_YEAR_DLL_RIBBON_DEPLOYMENT_DIR=%PROGRAMDATA_AUTODESK_REVIT_ADDINS_YEAR%\%ROOTPROJECTNAME%
 
-      set DotAddingFileDir=C:\ProgramData\Autodesk\Revit\Addins\%REVITVERSION%
-      set RibbonXmlAndDLLFolder=C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Template\%REVITVERSION%
+      set PROGRAMDATA_AUTODESK_REVIT_ADDINS_YEAR=C:\ProgramData\Autodesk\Revit\Addins\%REVITVERSION%
+      set REVIT_YEAR_DLL_RIBBON_DEPLOYMENT_DIR=C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Template\%REVITVERSION%
 
-      echo ******** Project Info *********
-      echo *** Configuration     : $(Configuration)
-      echo *** Project directory : %MSBUILDPROJECTDIR%
-      echo *** DLLs Directory    : %OUTPUTBINDIR%
+      REM This two variables are for the Release Versions output. Change the assigned path if you disire to output to different location.
+      set PROGRAMDATA_AUTODESK_REVIT_ADDINS_RELEASE_VERSION_YEAR=%PROGRAMDATA_AUTODESK_REVIT_ADDINS_YEAR%
+      set REVIT_YEAR_DLL_RIBBON_RELEASE_VERSION_DEPLOYMENT_DIR=%REVIT_YEAR_DLL_RIBBON_DEPLOYMENT_DIR%
 
-      echo.
+      echo ****************************************************************************
+      echo **************************** Project Info **********************************
+      echo **************** Configuration     : $(Configuration)
+      echo **************** Project directory : %MSBUILDPROJECTDIR%
+      echo **************** DLLs Directory    : %OUTPUTBINDIR%
+      echo ****************************************************************************
       if "$(Configuration.Contains('Debug'))" == "True" (
-      echo ====================================================
       echo *** Debug Configuration detected.
       echo.
       echo ******** Copy Files to User Profile *********
       echo *** Checking if Addins directory exists for Revit version: $(RevitVersion)
-      if not exist "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%" (
-      echo *** Directory does not exist. Creating directory: %APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%
-      mkdir "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%"
+      if not exist "%REVIT_YEAR_DLL_RIBBON_DEPLOYMENT_DIR%" (
+      echo *** Directory does not exist. Creating directory: %REVIT_YEAR_DLL_RIBBON_DEPLOYMENT_DIR%
+      mkdir "%REVIT_YEAR_DLL_RIBBON_DEPLOYMENT_DIR%"
       ) else (
-      echo *** Directory already exists: %APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%
+      echo *** Directory already exists: %REVIT_YEAR_DLL_RIBBON_DEPLOYMENT_DIR%
       )
       echo.
       echo *** Copying *Tab_%REVITVERSION%.addin files
-      echo --- from: %MSBUILDPROJECTDIR%
-      echo --- to  : %APPDATA_AUTODESK_REVIT_ADDINS_YEAR%
-      copy "%MSBUILDPROJECTDIR%\*Tab_%REVITVERSION%.addin" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR%"
+      echo --- from: %MSBUILDPROJECTDIR%\*Tab_%REVITVERSION%.addin
+      echo --- to  : %PROGRAMDATA_AUTODESK_REVIT_ADDINS_YEAR%\*Tab_%REVITVERSION%.addin
+      copy "%MSBUILDPROJECTDIR%\*Tab_%REVITVERSION%.addin" "%PROGRAMDATA_AUTODESK_REVIT_ADDINS_YEAR%"
       echo.
       echo *** Copying .dll files
       echo --- from: $(OutputPath)
-      echo --- to  :%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%
-      copy "%OUTPUTBINDIR%\*.dll" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%"
-      copy "%MSBUILDPROJECTDIR%\*.ribbon" "%APPDATA_AUTODESK_REVIT_ADDINS_YEAR_PROJECTNAME%"
+      echo --- to  :%REVIT_YEAR_DLL_RIBBON_DEPLOYMENT_DIR%
+      copy "%OUTPUTBINDIR%\*.dll" "%REVIT_YEAR_DLL_RIBBON_DEPLOYMENT_DIR%"
+      copy "%MSBUILDPROJECTDIR%\*.ribbon" "%REVIT_YEAR_DLL_RIBBON_DEPLOYMENT_DIR%"
       )
 
       echo.
       if "$(Configuration.Contains('Release'))" == "True" (
-      echo ====================================================
       echo *** Release Configuration detected.
       echo.
       echo ******** Copy Files to other locations *********
 
 
-      if not exist "%DotAddingFileDir%" (
-      echo *** Creating %DotAddingFileDir%
-      mkdir "%DotAddingFileDir%"
+      if not exist "%PROGRAMDATA_AUTODESK_REVIT_ADDINS_RELEASE_VERSION_YEAR%" (
+      echo *** Creating %PROGRAMDATA_AUTODESK_REVIT_ADDINS_RELEASE_VERSION_YEAR%
+      mkdir "%PROGRAMDATA_AUTODESK_REVIT_ADDINS_RELEASE_VERSION_YEAR%"
       )
       echo.
-      echo ******** Copying *%REVITVERSION%.addin files to: %DotAddingFileDir%
-      copy "%MSBUILDPROJECTDIR%\*%REVITVERSION%.addin" "%DotAddingFileDir%\"
+      echo ******** Copying *%REVITVERSION%.addin files to: %PROGRAMDATA_AUTODESK_REVIT_ADDINS_RELEASE_VERSION_YEAR%
+      copy "%MSBUILDPROJECTDIR%\*%REVITVERSION%.addin" "%PROGRAMDATA_AUTODESK_REVIT_ADDINS_RELEASE_VERSION_YEAR%\"
 
-      if not exist "%RibbonXmlAndDLLFolder%" (
-      echo *** Creating %RibbonXmlAndDLLFolder%
-      mkdir "%RibbonXmlAndDLLFolder%"
+      if not exist "%REVIT_YEAR_DLL_RIBBON_RELEASE_VERSION_DEPLOYMENT_DIR%" (
+      echo *** Creating %REVIT_YEAR_DLL_RIBBON_RELEASE_VERSION_DEPLOYMENT_DIR%
+      mkdir "%REVIT_YEAR_DLL_RIBBON_RELEASE_VERSION_DEPLOYMENT_DIR%"
       )
       echo.
-      echo ******** Copying .ribbon and .dll files to:  %RibbonXmlAndDLLFolder%
-      copy "%OUTPUTBINDIR%\*.dll" "%RibbonXmlAndDLLFolder%\"
-      copy "%MSBUILDPROJECTDIR%\*.ribbon" "%RibbonXmlAndDLLFolder%\"
+      echo ******** Copying .ribbon and .dll files to:  %REVIT_YEAR_DLL_RIBBON_RELEASE_VERSION_DEPLOYMENT_DIR%
+      copy "%OUTPUTBINDIR%\*.dll" "%REVIT_YEAR_DLL_RIBBON_RELEASE_VERSION_DEPLOYMENT_DIR%\"
+      copy "%MSBUILDPROJECTDIR%\*.ribbon" "%REVIT_YEAR_DLL_RIBBON_RELEASE_VERSION_DEPLOYMENT_DIR%\"
       )
-
-      echo ********* PostBuild Events End *********
+      echo ********* PostBuild Events End Project : %ROOTPROJECTNAME% *********
+      echo.
+      echo.
     </PostBuildEvent>
   </PropertyGroup>
 

@@ -229,13 +229,14 @@ namespace RevitRibbon_MainSourceCode
         {
             List<View> dependentViews;
 
-#if REVIT2024 || RREVIT2025
-            dependentViews = views.Where(view => view.GetPrimaryViewId()
-                                                      .Value != -1 && !view.IsTemplate)
-                                                      .ToList();
-#else
+#if REVIT2020 || RREVIT2021 || REVIT2022 || REVIT2023
             dependentViews = views.Where(view => view.GetPrimaryViewId()
                                                       .IntegerValue != -1 && !view.IsTemplate)
+                                                      .ToList();
+#else
+
+            dependentViews = views.Where(view => view.GetPrimaryViewId()
+                                                      .Value != -1 && !view.IsTemplate)
                                                       .ToList();
 #endif
 
@@ -314,21 +315,21 @@ namespace RevitRibbon_MainSourceCode
 
                 foreach (var view in group)
                 {
-#if REVIT2024
-                    long primaryViewIdValue = view.GetPrimaryViewId().Value;
-#else
+#if REVIT2020 || REVIT2021 || REVIT2022 || REVIT2023
                     int primaryViewIdValue = view.GetPrimaryViewId().IntegerValue;
+#else
+                    long primaryViewIdValue = view.GetPrimaryViewId().Value;
 #endif
 
                     // Check if the view is independent and has dependents
                     foreach (var dv in allViews)
                     {
-#if REVIT2024
-                        long dependentViewPrimaryId = dv.GetPrimaryViewId().Value;
-                        long viewIdValue = view.Id.Value;
-#else
+#if REVIT2020 || REVIT2021 || REVIT2022 || REVIT2023
                         int dependentViewPrimaryId = dv.GetPrimaryViewId().IntegerValue;
                         int viewIdValue = view.Id.IntegerValue;
+#else
+                        long dependentViewPrimaryId = dv.GetPrimaryViewId().Value;
+                        long viewIdValue = view.Id.Value;
 #endif
 
                         if (primaryViewIdValue == -1 && dependentViewPrimaryId == viewIdValue)

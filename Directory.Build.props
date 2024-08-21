@@ -94,10 +94,10 @@
     <PackageReference Include="EPPlus" Version="7.2.2"/>
     <PackageReference Include="System.Drawing.Common" Version="8.0.3" IncludeAssets="build; compile" PrivateAssets="All" />
     <PackageReference Include="Revit_All_Main_Versions_API_x64" Version="$(RevitVersion).*" IncludeAssets="build; compile" PrivateAssets="All" />
-    <PackageReference Include="Revit_All_Main_Versions_API_x64"  IncludeAssets="build; compile" PrivateAssets="All" />
+    <!--<PackageReference Include="Revit_All_Main_Versions_API_x64"  IncludeAssets="build; compile" PrivateAssets="All" />-->
 
       <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
-      <PackageReference Include="System.Text.Encoding.CodePages" />
+      <!--<PackageReference Include="System.Text.Encoding.CodePages" />-->
 
     
   </ItemGroup>
