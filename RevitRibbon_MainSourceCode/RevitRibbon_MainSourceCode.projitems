@@ -9,14 +9,13 @@
     <Import_RootNamespace>RevitRibbon_MainSourceCode</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Templates\" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Common\ButtonDataClass.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\CommandAvailability.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\GlobalUsing.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\Utils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Ribbon Builder\RibbonBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Templates\App_Template_Tab.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Templates\Cmd_Template.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\Cmd_CopyViewTemplates.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\Cmd_CleanDependentViewDims.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\Cmd_CopyDimsToParentViews.cs" />
@@ -49,6 +48,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\MyUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Templates\ButtonStructureTemplate.ribbon" />
+    <None Include="$(MSBuildThisFileDirectory)Templates\Template_Tab.ribbon" />
+    <None Include="$(MSBuildThisFileDirectory)Templates\Template_Tab_YYYY.addin" />
     <None Include="$(MSBuildThisFileDirectory)Unique Button Classes\BIM Team\NewProjectSetups\READ_ME.md" />
   </ItemGroup>
 </Project>

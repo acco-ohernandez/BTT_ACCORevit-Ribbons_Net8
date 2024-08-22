@@ -91,6 +91,22 @@
 
   <!-- Import the shared project items -->
   <Import Project="..\RevitRibbon_MainSourceCode\RevitRibbon_MainSourceCode.projitems" Label="Shared" />
+  <ItemGroup>
+    <None Remove="03.Engineering_Mechanical_Tab_2020.addin" />
+    <None Remove="03.Engineering_Mechanical_Tab_2021.addin" />
+    <None Remove="03.Engineering_Mechanical_Tab_2022.addin" />
+    <None Remove="03.Engineering_Mechanical_Tab_2023.addin" />
+    <None Remove="03.Engineering_Mechanical_Tab_2024.addin" />
+    <None Remove="03.Engineering_Mechanical_Tab_2025.addin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="03.Engineering_Mechanical_Tab_2020.addin" />
+    <Content Include="03.Engineering_Mechanical_Tab_2021.addin" />
+    <Content Include="03.Engineering_Mechanical_Tab_2022.addin" />
+    <Content Include="03.Engineering_Mechanical_Tab_2023.addin" />
+    <Content Include="03.Engineering_Mechanical_Tab_2024.addin" />
+    <Content Include="03.Engineering_Mechanical_Tab_2025.addin" />
+  </ItemGroup>
 
   <!-- Common Project References -->
   <ItemGroup>
