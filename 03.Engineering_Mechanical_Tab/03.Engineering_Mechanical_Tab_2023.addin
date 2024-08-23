@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Version 1.1.0 2023-12-21 -->
+<!-- Version 1.1.1 2024-08-22 -->
 <RevitAddIns>
   <AddIn Type="Application">
     <Name>03.Engineering_Mechanical_Tab</Name>
