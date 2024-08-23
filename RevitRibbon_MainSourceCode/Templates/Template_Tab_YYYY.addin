@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Version 1.1.1 2023-06-29 -->
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Template_Tab</Name>
+    <Assembly>"C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\<NewDllAddinFolder>\<Year>\<NewDllAddin>.dll"</Assembly>
+    <ClientId>Add a new Registry Format GUID Example:FA4A9991-80ED-4FFB-8E88-2C6112A375D7</ClientId>
+    <FullClassName>ProjectNameSpace.App_Template_Tab</FullClassName>
+    <VendorId>Orlando R Hernandez</VendorId>
+    <VendorDescription>ACCOES, http://accoes.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>

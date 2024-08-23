@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Version 1.0.0 2023-03-06 -->
+<tab name="Template">
+  <panel name="Template">
+    <stackeditems>
+      <button name="About"
+        classname="RevitRibbon_MainSourceCode.Cmd_About"
+        text="About"
+        tooltip="Latest Version: 1.0.0 2023-##-##"
+        image="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ACCO_16x16.png"
+        largeimage="C:\ACCORevit\ACCO\ACCORevit ADDINS\02-ACCORevit Ribbons\Images\ACCO_32x32.png"
+        tooltipimage=""
+        contexthelp=""/>
+    </stackeditems>
+  </panel>
+</tab>

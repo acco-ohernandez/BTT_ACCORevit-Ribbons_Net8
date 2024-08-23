@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Version 1.2.0 2024-08-15 -->
+<!-- Version 1.2.1 2024-08-22 -->
 <RevitAddIns>
   <AddIn Type="Application">
     <Name>02.Engineering_BIM_Team_Tab</Name>
